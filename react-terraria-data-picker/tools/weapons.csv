@@ -1,0 +1,409 @@
+rawName,id,name,damageType,damage,knockback,speed,autoswing,rarity,sell,obtained,material,tooltip,subclass,progression tier
+Abigail%27s_Flower,5114,Abigail's Flower,Summon,6,Very weak,Very slow,TRUE,3,50 Silver Coins,Drop,FALSE,Summons a friendly ghost to fight for you | 'It's hauntingly beautiful.',Summons,Pre-Bosses
+Adamantite_Glaive,406,Adamantite Glaive,Melee,49,Average,Fast,FALSE,4,1 Gold 80 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Adamantite_Repeater,481,Adamantite Repeater,Ranged,42,Very weak,Very fast,TRUE,4,2 Gold 40 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Adamantite_Sword,482,Adamantite Sword,Melee,61,Average,Fast,TRUE,4,2 Gold 76 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Aerial_Bane,3859,Aerial Bane,Ranged,39,Average,Average,TRUE,8,5 Gold Coins,Drop,FALSE,"Shoots splitting arrows, deals more damage to airborne enemies",Bows,Pre-Lunatic Cultist
+Ale_Tosser,3821,Ale Tosser,Melee,20,Strong,Very slow,FALSE,1,1 Silver Coin,Drop,FALSE,,,Pre-Skeletron
+Amarok,3289,Amarok,Melee,43,Very weak,Fast,FALSE,4,4 Gold Coins,Drop,FALSE,,Yoyos,Pre-mechanical bosses
+Amazon,3281,Amazon,Melee,18,Weak,Fast,FALSE,3,1 Gold 30 Silver Coins,Crafting,FALSE,,Yoyos,Pre-Bosses
+Amber_Staff,3377,Amber Staff,Magic,21,Average,Average,TRUE,1,40 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Amethyst_Staff,739,Amethyst Staff,Magic,15,Weak,Very slow,FALSE,0,4 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Anchor,2424,Anchor,Melee,70,Very strong,Very fast,FALSE,3,1 Gold Coin,Chest,FALSE,,Flails,Pre-mechanical bosses
+Aqua_Scepter,157,Aqua Scepter,Magic,27,Strong,Very fast,TRUE,2,1 Gold 75 Silver Coins,Chest,FALSE,Sprays out a shower of water,Wands,Pre-Wall of Flesh
+Arkhalis,3368,Arkhalis,Melee,25,Weak,Fast,FALSE,9,5 Gold Coins,Drop,FALSE,I didn't get this off of a Schmoo',Swords,Pre-Plantera
+Artery,3280,Artery,Melee,17,Weak,Fast,FALSE,1,1 Gold Coin,Crafting,FALSE,,Yoyos,Pre-Bosses
+Ash_Wood_Bow,5282,Ash Wood Bow,Ranged,10,No knockback,Fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Ash_Wood_Sword,5284,Ash Wood Sword,Melee,13,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Ballista_Cane,3825,Ballista Cane,Summon,74,Average,Average,FALSE,5,5 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | A slow but high damage tower that shoots piercing bolts | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Plantera
+Ballista_Rod,3824,Ballista Rod,Summon,30,Average,Average,FALSE,3,1 Gold Coin,Buy | Crafting,TRUE,Summons a sentry | A slow but high damage tower that shoots piercing bolts | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Skeletron
+Ballista_Staff,3826,Ballista Staff,Summon,156,Average,Average,FALSE,8,15 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | A slow but high damage tower that shoots piercing bolts | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Lunatic Cultist
+Ball_O%27_Hurt,162,Ball O' Hurt,Melee,30,Average,Very slow,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,,Flails,Pre-Bosses
+Bananarang,1324,Bananarang,Melee,45,Strong,Very fast,TRUE,5,12 Gold Coins,Drop,FALSE,,Boomerangs,Pre-mechanical bosses
+Bat_Bat,5097,Bat Bat,Melee,36,Average,Very slow,FALSE,2,25 Silver Coins,Drop,FALSE,May heal user on hit | 'Maybe I could bat some bats with this.',Swords,Pre-Bosses
+Bat_Scepter,1801,Bat Scepter,Magic,45,Very weak,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,Summons bats to attack your enemies,Wands,Pre-Golem
+Beam_Sword,723,Beam Sword,Melee,52,Strong,Very fast,TRUE,4,3 Gold Coins,Drop,FALSE,Shoots a beam of light,Swords,Pre-mechanical bosses
+Bee_Gun,1121,Bee Gun,Magic,9,Extremely weak,Very fast,TRUE,2,2 Gold Coins,Drop,FALSE,Shoots bees that will chase your enemy,Magic Guns,Pre-Skeletron
+Bee_Keeper,1123,Bee Keeper,Melee,30,Average,Very fast,TRUE,3,2 Gold Coins,Drop,TRUE,Summons killer bees after striking your foe | Small chance to cause confusion,Swords,Pre-Skeletron
+Betsy%27s_Wrath,3870,Betsy's Wrath,Magic,100,Strong,Very fast,TRUE,8,5 Gold Coins,Drop,FALSE,Splashes defense reducing miasma!,Wands,Pre-Lunatic Cultist
+Blade_Staff,4758,Blade Staff,Summon,6,No knockback,Very slow,TRUE,5,1 Gold Coin,Drop,FALSE,Summons an Enchanted Dagger to fight for you | Ignores a substantial amount of enemy defense | 'Don't let their small size fool you',Summons,Pre-mechanical bosses
+Blade_of_Grass,190,Blade of Grass,Melee,18,Average,Very fast,FALSE,3,54 Silver Coins,Crafting,TRUE,Has a chance to poison enemies,Swords,Pre-Bosses
+Bladed_Glove,1827,Bladed Glove,Melee,14,Weak,Insanely fast,TRUE,2,1 Gold Coin,Drop,FALSE,,Swords,Pre-Bosses
+Bladetongue,3211,Bladetongue,Melee,55,Average,Average,TRUE,5,4 Gold Coins,Fishing,FALSE,Spits an Ichor stream on contact,Swords,Pre-mechanical bosses
+Blizzard_Staff,1931,Blizzard Staff,Magic,58,Average,Very fast,TRUE,8,9 Gold Coins,Drop,FALSE,Showers an area with icicles,Wands,Pre-Golem
+Blood_Butcherer,795,Blood Butcherer,Melee,22,Average,Fast,FALSE,1,27 Silver Coins,Crafting,TRUE,,Swords,Pre-Bosses
+Blood_Rain_Bow,4381,Blood Rain Bow,Ranged,14,Very weak,Very fast,TRUE,3,1 Gold Coin,Drop,FALSE,Rains blood from the sky | 'Reign in Blood',Bows,Pre-Bosses
+Blood_Thorn,4270,Blood Thorn,Magic,34,Extremely weak,Slow,TRUE,4,4 Gold Coins,Drop,FALSE,Summons blood thorns from the ground,,Pre-mechanical bosses
+Bloody_Machete,1825,Bloody Machete,Melee,20,Average,Very fast,FALSE,2,1 Gold Coin,Drop,FALSE,,Boomerangs,Pre-Bosses
+Blowgun,986,Blowgun,Ranged,27,Weak,Slow,TRUE,3,1 Gold Coin,Buy,FALSE,Allows the collection of seeds for ammo,Specialist,Pre-Skeletron
+Blowpipe,281,Blowpipe,Ranged,9,Weak,Fast,TRUE,0,20 Silver Coins,Chest,FALSE,Allows the collection of seeds for ammo,Specialist,Pre-Bosses
+Blue_Moon,163,Blue Moon,Melee,54,Average,Very slow,FALSE,2,1 Gold 75 Silver Coins,Chest,FALSE,,Flails,Pre-Wall of Flesh
+Bone_Sword,1166,Bone Sword,Melee,19,Average,Fast,FALSE,3,18 Silver Coins,Drop,FALSE,,Swords,Pre-Bosses
+Book_of_Skulls,1313,Book of Skulls,Magic,29,Weak,Average,TRUE,2,1 Gold 50 Silver Coins,Drop,FALSE,Shoots a skull,Spell Tomes,Pre-Wall of Flesh
+Boomstick,964,Boomstick,Ranged,14,Average,Very slow,FALSE,2,2 Gold Coins,Chest,FALSE,Fires a spread of bullets,Guns,Pre-Bosses
+Boreal_Wood_Bow,2747,Boreal Wood Bow,Ranged,6,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Boreal_Wood_Sword,2745,Boreal Wood Sword,Melee,8,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Brand_of_the_Inferno,3823,Brand of the Inferno,Melee,95,Strong,Very fast,TRUE,5,1 Gold Coin,Drop,FALSE,Right click to guard with a shield,Swords,Pre-Plantera
+Breaker_Blade,426,Breaker Blade,Melee,70,Very strong,Slow,FALSE,4,3 Gold Coins,Drop,FALSE,Deals more damage to unhurt enemies,Swords,Pre-mechanical bosses
+Breathing_Reed,186,Breathing Reed,Melee,10,Weak,Average,FALSE,1,20 Silver Coins,Chest,FALSE,Increases breath time and allows breathing in water,Swords,Pre-Bosses
+Bubble_Gun,2623,Bubble Gun,Magic,70,Very weak,Very fast,TRUE,8,5 Gold Coins,Drop,FALSE,Rapidly shoots forceful bubbles,Magic Guns,Pre-Lunatic Cultist
+Cactus_Sword,881,Cactus Sword,Melee,10,Average,Average,FALSE,0,3 Silver 60 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Candy_Cane_Sword,1909,Candy Cane Sword,Melee,19,Average,Average,FALSE,1,27 Silver Coins,Chest,FALSE,,Swords,Pre-Bosses
+Candy_Corn_Rifle,1782,Candy Corn Rifle,Ranged,44,Very weak,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,33% chance to not consume ammo,Guns,Pre-Golem
+Cascade,3282,Cascade,Melee,27,Average,Fast,FALSE,3,1 Gold 80 Silver Coins,Drop,FALSE,,Yoyos,Pre-Wall of Flesh
+Celebration,3546,Celebration,Ranged,25,Weak,Average,TRUE,8,16 Gold Coins,Buy,FALSE,,Launchers,Pre-Lunatic Cultist
+Celebration_Mk2,3930,Celebration Mk2,Ranged,50,Extremely strong,Insanely fast,TRUE,10,10 Gold Coins,Drop,FALSE,50% chance to not consume ammo | 'All good things end with a bang... or many!',Launchers,Endgame
+Chain_Guillotines,3012,Chain Guillotines,Melee,59,Weak,Very fast,TRUE,5,8 Gold Coins,Drop,FALSE,,Flails,Pre-mechanical bosses
+Chain_Gun,1929,Chain Gun,Ranged,31,Very weak,Insanely fast,TRUE,8,9 Gold Coins,Drop,FALSE,50% chance to not consume ammo,Guns,Pre-Golem
+Chain_Knife,1325,Chain Knife,Melee,12,Weak,Very fast,FALSE,1,25 Silver Coins,Drop,FALSE,,Flails,Pre-Bosses
+Charged_Blaster_Cannon,2882,Charged Blaster Cannon,Magic,100,Very weak,Very fast,FALSE,8,10 Gold Coins,Drop,FALSE,,,Pre-Lunatic Cultist
+Chik,3283,Chik,Melee,39,Weak,Fast,FALSE,4,4 Gold Coins,Crafting,FALSE,,Yoyos,Pre-mechanical bosses
+Chlorophyte_Claymore,1226,Chlorophyte Claymore,Melee,95,Average,Average,FALSE,7,5 Gold 52 Silver Coins,Crafting,FALSE,Shoots a powerful orb,Swords,Pre-Plantera
+Chlorophyte_Partisan,1228,Chlorophyte Partisan,Melee,49,Strong,Fast,FALSE,7,3 Gold 60 Silver Coins,Crafting,FALSE,Shoots a spore cloud,Spears,Pre-Plantera
+Chlorophyte_Saber,1227,Chlorophyte Saber,Melee,57,Weak,Very fast,TRUE,7,5 Gold 52 Silver Coins,Crafting,FALSE,Shoots a spore cloud,Swords,Pre-Plantera
+Chlorophyte_Shotbow,1229,Chlorophyte Shotbow,Ranged,34,Very weak,Very fast,TRUE,7,4 Gold 80 Silver Coins,Crafting,FALSE,,Bows,Pre-Plantera
+Christmas_Tree_Sword,1928,Christmas Tree Sword,Melee,86,Strong,Fast,TRUE,8,10 Gold Coins,Drop,FALSE,Shoots Christmas ornaments,Swords,Pre-Golem
+Classy_Cane,3351,Classy Cane,Melee,16,Weak,Very fast,FALSE,2,50 Silver Coins,Drop,FALSE,,Swords,Pre-mechanical bosses
+Clinger_Staff,3014,Clinger Staff,Magic,43,Very strong,Fast,TRUE,5,8 Gold Coins,Drop,FALSE,Summons a wall of cursed flames,,Pre-mechanical bosses
+Clockwork_Assault_Rifle,434,Clockwork Assault Rifle,Ranged,17,No knockback,Very fast,TRUE,4,3 Gold Coins,Drop,FALSE,Three round burst | Only the first shot consumes ammo,Guns,Pre-mechanical bosses
+Cobalt_Naginata,537,Cobalt Naginata,Melee,44,Weak,Average,FALSE,4,90 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Cobalt_Repeater,435,Cobalt Repeater,Ranged,35,Extremely weak,Fast,TRUE,4,1 Gold 20 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Cobalt_Sword,483,Cobalt Sword,Melee,40,Average,Very fast,TRUE,4,1 Gold 38 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Code_1,3262,Code 1,Melee,21,Weak,Fast,FALSE,2,1 Gold Coin,Buy,FALSE,,Yoyos,Pre-Skeletron
+Code_2,3284,Code 2,Melee,54,Weak,Fast,FALSE,5,5 Gold Coins,Buy,FALSE,,Yoyos,Pre-Plantera
+Coin_Gun,905,Coin Gun,Ranged,0,Very weak,Insanely fast,TRUE,6,6 Gold Coins,Drop,FALSE,Uses coins for ammo | Higher valued coins do more damage,Specialist,Pre-mechanical bosses
+Combat_Wrench,4818,Combat Wrench,Melee,25,Weak,Very fast,FALSE,2,50 Silver Coins,Drop,FALSE,"For fixing things, and breaking them'",Boomerangs,Pre-Wall of Flesh
+Cool_Whip,4911,Cool Whip,Summon,45,Extremely weak,Average,FALSE,4,4 Gold Coins,Crafting,FALSE,6 summon tag damage | Your summons will focus struck enemies | Strike enemies to summon a friendly snowflake | 'Let me have some of that cool whip',Whips,Pre-mechanical bosses
+Copper_Bow,3504,Copper Bow,Ranged,6,No knockback,Average,FALSE,0,70 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Copper_Broadsword,3508,Copper Broadsword,Melee,9,Average,Fast,FALSE,0,90 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Copper_Shortsword,3507,Copper Shortsword,Melee,5,Weak,Very fast,FALSE,0,70 Copper Coins,Crafting,TRUE,,Swords,Pre-Bosses
+Crimson_Rod,1256,Crimson Rod,Magic,12,No knockback,Fast,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,Summons a cloud to rain blood on your foes,,Pre-Bosses
+Crystal_Serpent,3209,Crystal Serpent,Magic,40,Average,Average,TRUE,5,4 Gold Coins,Fishing,FALSE,Shoots an explosive crystal charge,Wands,Pre-mechanical bosses
+Crystal_Storm,518,Crystal Storm,Magic,32,Average,Insanely fast,TRUE,4,4 Gold Coins,Crafting,FALSE,Summons rapid fire crystal shards,Spell Tomes,Pre-mechanical bosses
+Crystal_Vile_Shard,3051,Crystal Vile Shard,Magic,25,Very weak,Slow,TRUE,5,8 Gold Coins,Drop,FALSE,Summons a massive crystal spike | Ignores 10 points of enemy Defense,,Pre-mechanical bosses
+Cursed_Flames,519,Cursed Flames,Magic,55,Strong,Very fast,TRUE,4,4 Gold Coins,Crafting,FALSE,Summons unholy fire balls,Spell Tomes,Pre-mechanical bosses
+Cutlass,672,Cutlass,Melee,53,Weak,Very fast,TRUE,4,3 Gold 60 Silver Coins,Drop,FALSE,,Swords,Pre-mechanical bosses
+Daedalus_Stormbow,3029,Daedalus Stormbow,Ranged,38,Very weak,Very fast,TRUE,6,8 Gold Coins,Drop,FALSE,Shoots arrows from the sky,Bows,Pre-mechanical bosses
+Dao_of_Pow,389,Dao of Pow,Melee,100,Average,Very slow,FALSE,5,2 Gold 88 Silver Coins,Crafting,FALSE,Has a chance to confuse | 'Find your inner pieces',Flails,Pre-mechanical bosses
+Dark_Harvest,4680,Dark Harvest,Summon,100,Very weak,Average,FALSE,8,10 Gold Coins,Drop,FALSE,Your summons will focus struck enemies | Strike enemies with dark energy to gain attack speed | Dark energy jumps from enemies hit by summons,Whips,Pre-Golem
+Dark_Lance,274,Dark Lance,Melee,34,Average,Fast,FALSE,3,2 Gold 50 Silver Coins,Chest,FALSE,,Spears,Pre-Wall of Flesh
+Dart_Pistol,3007,Dart Pistol,Ranged,28,Weak,Fast,TRUE,5,8 Gold Coins,Drop,FALSE,,Specialist,Pre-mechanical bosses
+Dart_Rifle,3008,Dart Rifle,Ranged,52,Average,Very slow,TRUE,5,8 Gold Coins,Drop,FALSE,,Specialist,Pre-mechanical bosses
+Daybreak,3543,Daybreak,Melee,150,Average,Very fast,TRUE,10,10 Gold Coins,Crafting,FALSE,Rend your foes asunder with a spear of light!',,Pre-Moon Lord
+Deadly_Sphere_Staff,3249,Deadly Sphere Staff,Summon,40,Very weak,Very slow,TRUE,8,10 Gold Coins,Drop,FALSE,Summons a deadly sphere to fight for you,Summons,Pre-Golem
+Death_Sickle,1327,Death Sickle,Melee,57,Average,Fast,TRUE,6,7 Gold 50 Silver Coins,Drop,FALSE,Shoots a deathly sickle,Swords,Pre-Plantera
+Demon_Bow,44,Demon Bow,Ranged,14,Extremely weak,Fast,FALSE,1,36 Silver Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Demon_Scythe,272,Demon Scythe,Magic,35,Average,Very fast,FALSE,3,1 Gold 50 Silver Coins,Drop,FALSE,Casts a demon scythe,Spell Tomes,Pre-Bosses
+Desert_Tiger_Staff,4607,Desert Tiger Staff,Summon,41,Weak,Very slow,TRUE,8,20 Gold Coins,Chest,FALSE,Summons a white tiger to fight for you,Summons,Pre-Golem
+Diamond_Staff,744,Diamond Staff,Magic,23,Average,Average,TRUE,2,60 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Drippler_Crippler,4272,Drippler Crippler,Melee,110,Strong,Very slow,FALSE,4,4 Gold Coins,Drop,FALSE,,Flails,Pre-mechanical bosses
+Durendal,4678,Durendal,Summon,55,Very weak,Average,FALSE,5,4 Gold 60 Silver Coins,Crafting,FALSE,9 summon tag damage | Your summons will focus struck enemies | Strike enemies to gain attack speed,Whips,Pre-Plantera
+Ebonwood_Bow,655,Ebonwood Bow,Ranged,8,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Ebonwood_Sword,653,Ebonwood Sword,Melee,11,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Electrosphere_Launcher,2796,Electrosphere Launcher,Ranged,40,Very weak,Very fast,FALSE,8,10 Gold Coins,Drop,FALSE,,Launchers,Pre-Lunatic Cultist
+Elf_Melter,1910,Elf Melter,Ranged,53,Extremely weak,Average,TRUE,8,10 Gold Coins,Drop,FALSE,Uses gel for ammo | Ignores 15 points of enemy Defense,Specialist,Pre-Golem
+Emerald_Staff,742,Emerald Staff,Magic,19,Average,Slow,TRUE,1,30 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Enchanted_Boomerang,55,Enchanted Boomerang,Melee,17,Very strong,Very fast,FALSE,1,1 Gold Coin,Crafting,TRUE,,Boomerangs,Pre-Bosses
+Enchanted_Sword_%28item%29,989,Enchanted Sword,Melee,23,Average,Fast,TRUE,2,3 Gold Coins,Chest | Drop,TRUE,Shoots an enchanted sword beam,Swords,Pre-Bosses
+Eventide,4953,Eventide,Ranged,50,Very weak,Average,TRUE,8,5 Gold Coins,Drop,FALSE,,Bows,Pre-Lunatic Cultist
+Excalibur,368,Excalibur,Melee,72,Average,Very fast,TRUE,5,4 Gold 60 Silver Coins,Crafting,TRUE,,Swords,Pre-Plantera
+Exotic_Scimitar,3349,Exotic Scimitar,Melee,20,Average,Very fast,FALSE,2,50 Silver Coins,Drop,FALSE,,Swords,Pre-Bosses
+Explosive_Trap_Cane,3833,Explosive Trap Cane,Summon,59,Extremely weak,Average,FALSE,5,5 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | A trap that explodes when enemies come near | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Plantera
+Explosive_Trap_Rod,3832,Explosive Trap Rod,Summon,24,Extremely weak,Average,FALSE,3,1 Gold Coin,Buy | Crafting,TRUE,Summons a sentry | A trap that explodes when enemies come near | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Skeletron
+Explosive_Trap_Staff,3834,Explosive Trap Staff,Summon,126,Extremely weak,Average,FALSE,8,15 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | A trap that explodes when enemies come near | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Lunatic Cultist
+Falcon_Blade,2608,Falcon Blade,Melee,25,Average,Very fast,TRUE,4,20 Silver Coins,Chest,FALSE,,Swords,Pre-Bosses
+Fetid_Baghnakhs,3013,Fetid Baghnakhs,Melee,60,Average,Insanely fast,TRUE,5,8 Gold Coins,Drop,FALSE,,Swords,Pre-mechanical bosses
+Finch_Staff,4281,Finch Staff,Summon,7,Weak,Very slow,TRUE,1,1 Gold Coin,Chest | Crafting,FALSE,Summons a baby finch to fight for you,Summons,Pre-Bosses
+Firecracker,4912,Firecracker,Summon,37,Very weak,Average,FALSE,4,3 Gold Coins,Drop,FALSE,Your summons will focus struck enemies | Strike enemies with blazing energy | Blazing energy explodes from enemies hit by summons,Whips,Pre-mechanical bosses
+Flairon,2611,Flairon,Melee,66,Average,Very fast,TRUE,8,5 Gold Coins,Drop,FALSE,Spews homing bubbles,Flails,Pre-Lunatic Cultist
+Flamarang,119,Flamarang,Melee,49,Very strong,Very fast,FALSE,3,2 Gold Coins,Crafting,FALSE,,Boomerangs,Pre-Skeletron
+Flameburst_Cane,3819,Flameburst Cane,Summon,42,Very weak,Average,FALSE,5,5 Gold Coin,Buy | Crafting,TRUE,Summons a sentry | An average speed tower that shoots exploding fireballs | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Plantera
+Flameburst_Rod,3818,Flameburst Rod,Summon,17,Very weak,Average,FALSE,3,1 Gold Coin,Buy | Crafting,TRUE,Summons a sentry | An average speed tower that shoots exploding fireballs | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Skeletron
+Flameburst_Staff,3820,Flameburst Staff,Summon,88,Very weak,Average,FALSE,8,15 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | An average speed tower that shoots exploding fireballs | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Lunatic Cultist
+Flamelash,218,Flamelash,Magic,32,Strong,Average,FALSE,3,2 Gold 50 Silver Coins,Chest,FALSE,Summons a controllable ball of fire,Wands,Pre-Wall of Flesh
+Flamethrower,506,Flamethrower,Ranged,35,Extremely weak,Average,TRUE,5,10 Gold Coins,Crafting,FALSE,Uses gel for ammo | Ignores 15 points of enemy Defense,Specialist,Pre-Plantera
+Flaming_Mace,5012,Flaming Mace,Melee,18,Average,Very slow,FALSE,1,2 Gold Coins,Crafting,FALSE,May the fire light your way',Flails,Pre-Bosses
+Flare_Gun,930,Flare Gun,Ranged,2,No knockback,Very fast,FALSE,1,1 Gold Coin,Chest,FALSE,,Specialist,Pre-Bosses
+Flintlock_Pistol,95,Flintlock Pistol,Ranged,13,Extremely weak,Very fast,FALSE,1,1 Gold Coin,Buy,FALSE,,Guns,Pre-Bosses
+Flinx_Staff,5069,Flinx Staff,Summon,8,Very weak,Very slow,TRUE,3,50 Silver Coins,Crafting,FALSE,Summons a snow flinx to fight for you,Summons,Pre-Bosses
+Flower_Pow,1259,Flower Pow,Melee,130,Strong,Very slow,FALSE,7,6 Gold Coins,Drop,FALSE,Shoots razor sharp flower petals at nearby enemies,Flails,Pre-Golem
+Flower_of_Fire,112,Flower of Fire,Magic,48,Average,Very fast,FALSE,3,2 Gold 50 Silver Coins,Chest,FALSE,Throws balls of fire,Wands,Pre-Wall of Flesh
+Flower_of_Frost,1264,Flower of Frost,Magic,60,Strong,Very fast,FALSE,5,5 Gold Coins,Drop,FALSE,Shoots a ball of frost,Wands,Pre-mechanical bosses
+Flying_Dragon,3827,Flying Dragon,Melee,180,Average,Very fast,TRUE,8,5 Gold Coins,Drop,FALSE,Unleashes the heart's energy forward,Swords,Pre-Lunatic Cultist
+Flying_Knife,3030,Flying Knife,Melee,40,Average,Very fast,FALSE,6,8 Gold Coins,Drop,FALSE,Throws a controllable flying knife,,Pre-mechanical bosses
+Flymeal,5129,Flymeal,Melee,15,Average,Very fast,FALSE,2,35 Silver Coins,Crafting,FALSE,Best used for pranking townsfolk | 'Makes others smell like cilantro',Swords,Pre-Bosses
+Format_C,3315,Format:C,Melee,39,Weak,Fast,FALSE,3,4 Gold Coins,Buy,FALSE,,Yoyos,Pre-mechanical bosses
+Frost_Staff,726,Frost Staff,Magic,46,Average,Very fast,TRUE,5,4 Gold Coins,Drop,FALSE,Shoots a stream of frost,Wands,Pre-mechanical bosses
+Frostbrand,676,Frostbrand,Melee,49,Average,Fast,TRUE,5,5 Gold Coins,Drop,FALSE,Shoots an icy bolt,Swords,Pre-mechanical bosses
+Fruitcake_Chakram,1918,Fruitcake Chakram,Melee,19,Very strong,Very fast,FALSE,1,1 Gold Coin,Chest,FALSE,,Boomerangs,Pre-Bosses
+Gatligator,2270,Gatligator,Ranged,21,Extremely weak,Insanely fast,TRUE,4,7 Gold Coins,Buy,FALSE,50% chance to not consume ammo | Highly inaccurate,Guns,Pre-mechanical bosses
+Ghastly_Glaive,3836,Ghastly Glaive,Melee,45,Strong,Average,FALSE,5,1 Gold Coin,Drop,FALSE,Summons ghosts as it hits enemies,Spears,Pre-Plantera
+Gladius,4463,Gladius,Melee,15,Very weak,Fast,FALSE,1,30 Silver Coins,Drop,FALSE,Are you not entertained?!',Swords,Pre-Bosses
+Gold_Bow,3516,Gold Bow,Ranged,11,No knockback,Average,FALSE,0,14 Silver Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Gold_Broadsword,3520,Gold Broadsword,Melee,15,Strong,Very fast,FALSE,0,18 Silver Coins,Crafting,TRUE,,Swords,Pre-Bosses
+Gold_Shortsword,3519,Gold Shortsword,Melee,12,Average,Very fast,FALSE,0,14 Silver Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Golden_Shower,1336,Golden Shower,Magic,30,Weak,Very fast,TRUE,4,4 Gold Coins,Drop | Crafting,FALSE,Sprays a shower of ichor | Decreases target's defense,Spell Tomes,Pre-mechanical bosses
+Golem_Fist,1297,Golem Fist,Melee,90,Insane,Fast,TRUE,7,7 Gold Coins,Drop,FALSE,Punches with the force of a golem,Flails,Pre-Lunatic Cultist
+Gradient,3316,Gradient,Melee,49,Weak,Fast,FALSE,3,4 Gold Coins,Buy,FALSE,,Yoyos,Pre-mechanical bosses
+Gray_Zapinator,4347,Gray Zapinator,Magic,42,Average,Very slow,FALSE,2,3 Gold 40 Silver Coins,Buy,FALSE,It might be broken',Magic Guns,Pre-Skeletron
+Grenade_Launcher,758,Grenade Launcher,Ranged,60,Weak,Very fast,TRUE,8,7 Gold Coins,Drop,FALSE,,Launchers,Pre-Golem
+Gungnir,550,Gungnir,Melee,61,Strong,Fast,FALSE,5,4 Gold 60 Silver Coins,Crafting,FALSE,,Spears,Pre-Plantera
+Hallowed_Jousting_Lance,4790,Hallowed Jousting Lance,Melee,90,Insane,Fast,FALSE,5,4 Gold 60 Silver Coins,Crafting,FALSE,Build momentum to increase attack power,,Pre-Plantera
+Hallowed_Repeater,578,Hallowed Repeater,Ranged,50,Very weak,Very fast,TRUE,4,4 Gold Coins,Crafting,FALSE,,Bows,Pre-Plantera
+Ham_Bat,5096,Ham Bat,Melee,57,Strong,Very fast,TRUE,4,1 Gold Coin,Drop,FALSE,Grows more powerful the better fed you are | Defeating enemies temporarily improves healing | 'TIS A WEAPON O' PIG BUTT!',Swords,Pre-mechanical bosses
+Handgun,164,Handgun,Ranged,26,Very weak,Very fast,FALSE,2,1 Gold 75 Silver Coins,Chest,TRUE,,Guns,Pre-Wall of Flesh
+Harpoon,160,Harpoon,Ranged,25,Average,Average,TRUE,2,54 Silver Coins,Drop,FALSE,,Specialist,Pre-Bosses
+Heat_Ray,1295,Heat Ray,Magic,90,Very weak,Very fast,TRUE,7,7 Gold Coins,Drop,FALSE,Shoots a scorching ray of heat | 'Oolaa!!',Magic Guns,Pre-Lunatic Cultist
+Hel-Fire,3290,Hel-Fire,Melee,41,Average,Fast,FALSE,4,4 Gold Coins,Drop,FALSE,,Yoyos,Pre-mechanical bosses
+Hellwing_Bow,3019,Hellwing Bow,Ranged,22,Average,Very fast,TRUE,3,2 Gold 50 Silver Coins,Chest,FALSE,Wooden arrows turn into flaming bats,Bows,Pre-Wall of Flesh
+Hive-Five,5294,Hive-Five,Melee,24,Weak,Fast,FALSE,3,70 Silver Coins,Crafting,FALSE,Summons killer bees after striking your foe,Yoyos,Pre-Skeletron
+Hornet_Staff,2364,Hornet Staff,Summon,12,Very weak,Fast,TRUE,3,70 Silver Coins,Crafting,FALSE,Summons a hornet to fight for you,Summons,Pre-Skeletron
+Houndius_Shootius,5119,Houndius Shootius,Summon,24,Very strong,Average,FALSE,2,1 Gold 50 Silver Coins,Drop,FALSE,"Summons a sentry | Summons an arcane construct to shoot optic blasts at your enemies | 'Oh me oh my, look at that eye!'",Sentries,Pre-Skeletron
+Ice_Blade,724,Ice Blade,Melee,17,Average,Very fast,TRUE,1,40 Silver Coins,Chest,FALSE,Shoots an icy bolt,Swords,Pre-Bosses
+Ice_Boomerang,670,Ice Boomerang,Melee,21,Very strong,Very fast,FALSE,1,1 Gold Coin,Chest,TRUE,,Boomerangs,Pre-Bosses
+Ice_Bow,725,Ice Bow,Ranged,39,Average,Very fast,TRUE,5,5 Gold Coins,Drop,FALSE,Shoots frost arrows,Bows,Pre-mechanical bosses
+Ice_Rod,496,Ice Rod,Magic,28,Very weak,Very fast,TRUE,4,10 Gold Coins,Buy,FALSE,Summons a block of ice,Wands,Pre-mechanical bosses
+Ice_Sickle,1306,Ice Sickle,Melee,50,Average,Fast,FALSE,5,5 Gold Coins,Drop,FALSE,Shoots an icy sickle,Swords,Pre-mechanical bosses
+Imp_Staff,2365,Imp Staff,Summon,17,Very weak,Very slow,TRUE,3,54 Silver Coins,Crafting,FALSE,Summons an imp to fight for you,Summons,Pre-Skeletron
+Inferno_Fork,1445,Inferno Fork,Magic,70,Average,Average,TRUE,8,6 Gold Coins,Drop,FALSE,Launches a ball of fire that explodes into a raging inferno,Wands,Pre-Golem
+Influx_Waver,2880,Influx Waver,Melee,100,Average,Very fast,TRUE,8,10 Gold Coins,Drop,TRUE,,Swords,Pre-Lunatic Cultist
+Iron_Bow,99,Iron Bow,Ranged,8,No knockback,Average,FALSE,0,2 Silver 80 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Iron_Broadsword,4,Iron Broadsword,Melee,12,Average,Very fast,FALSE,0,3 Silver 60 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Iron_Shortsword,6,Iron Shortsword,Melee,8,Weak,Very fast,FALSE,0,2 Silver 80 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Jack_%27O_Lantern_Launcher,1784,Jack 'O Lantern Launcher,Ranged,65,Average,Fast,TRUE,8,10 Gold Coins,Drop,FALSE,,Launchers,Pre-Golem
+Jousting_Lance,4788,Jousting Lance,Melee,60,Insane,Fast,FALSE,4,1 Gold 20 Silver Coins,Buy,FALSE,Build momentum to increase attack power | 'Have at thee!',,Pre-mechanical bosses
+KO_Cannon,1314,KO Cannon,Melee,40,Strong,Average,TRUE,4,3 Gold 50 Silver Coins,Drop,FALSE,Shoots a boxing glove,Flails,Pre-mechanical bosses
+Kaleidoscope,4914,Kaleidoscope,Summon,180,Weak,Average,FALSE,8,5 Gold Coins,Drop,FALSE,20 summon tag damage | 10% summon tag critical strike chance | Your summons will focus struck enemies,Whips,Pre-Lunatic Cultist
+Katana,2273,Katana,Melee,18,Weak,Very fast,TRUE,1,2 Gold Coins,Buy,FALSE,,Swords,Pre-Bosses
+Keybrand,671,Keybrand,Melee,105,Strong,Very fast,TRUE,8,4 Gold Coins,Drop,FALSE,Deals more damage to injured foes,Swords,Pre-Golem
+Kraken,3291,Kraken,Melee,95,Average,Fast,FALSE,8,11 Gold Coins,Drop,FALSE,,Yoyos,Pre-Golem
+Laser_Machinegun,2795,Laser Machinegun,Magic,60,Very weak,Very fast,FALSE,8,10 Gold Coins,Drop,FALSE,,Magic Guns,Pre-Lunatic Cultist
+Laser_Rifle,514,Laser Rifle,Magic,29,Very weak,Very fast,TRUE,4,3 Gold Coins,Drop,FALSE,,Magic Guns,Pre-mechanical bosses
+Last_Prism,3541,Last Prism,Magic,100,Extremely weak,Very fast,FALSE,10,10 Gold Coins,Drop,FALSE,Fire a lifeform disintegration rainbow',,Endgame
+Lead_Bow,3492,Lead Bow,Ranged,9,No knockback,Average,FALSE,0,4 Silver 20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Lead_Broadsword,3496,Lead Broadsword,Melee,13,Average,Very fast,FALSE,0,5 Silver 40 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Lead_Shortsword,3495,Lead Shortsword,Melee,9,Weak,Very fast,FALSE,0,4 Silver 20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Leaf_Blower,1178,Leaf Blower,Magic,48,Weak,Insanely fast,TRUE,7,6 Gold Coins,Drop,FALSE,Rapidly shoots razor sharp leaves,Magic Guns,Pre-Golem
+Leather_Whip,4672,Leather Whip,Summon,14,Extremely weak,Average,FALSE,1,2 Gold Coins,Buy,FALSE,4 summon tag damage | Your summons will focus struck enemies | 'Die monster!',Whips,Pre-Bosses
+Life_Drain,3006,Life Drain,Magic,35,Very weak,Very fast,TRUE,5,8 Gold Coins,Drop,FALSE,Drains life from enemies,Wands,Pre-mechanical bosses
+Light_Disc,561,Light Disc,Melee,60,Very strong,Very fast,TRUE,5,15 Gold Coins,Crafting,FALSE,"Greetings, programs!'",Boomerangs,Pre-Plantera
+Light%27s_Bane,46,Light's Bane,Melee,16,Average,Very fast,FALSE,1,27 Silver Coins,Crafting,TRUE,,Swords,Pre-Bosses
+Lightning_Aura_Cane,3830,Lightning Aura Cane,Summon,11,Extremely weak,Average,FALSE,5,5 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | An aura that repeatedly zaps enemies that go inside | Aura damage penetrates enemy defense | Hits quickly at the expense of 50% tag damage | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Plantera
+Lightning_Aura_Rod,3829,Lightning Aura Rod,Summon,4,Extremely weak,Average,FALSE,3,1 Gold Coin,Buy | Crafting,TRUE,Summons a sentry | An aura that repeatedly zaps enemies that go inside | Aura damage penetrates enemy defense | Hits quickly at the expense of 50% tag damage | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Skeletron
+Lightning_Aura_Staff,3831,Lightning Aura Staff,Summon,34,Extremely weak,Average,FALSE,8,15 Gold Coins,Buy | Crafting,TRUE,Summons a sentry | An aura that repeatedly zaps enemies that go inside | Aura damage penetrates enemy defense | Hits quickly at the expense of 50% tag damage | Costs 10 Etherian Mana per use while defending an Eternia Crystal,Sentries,Pre-Lunatic Cultist
+Lunar_Flare,3570,Lunar Flare,Magic,100,Average,Very fast,TRUE,10,10 Gold Coins,Drop,FALSE,Rains down lunar flares,Spell Tomes,Endgame
+Lunar_Portal_Staff,3569,Lunar Portal Staff,Summon,100,Very strong,Average,FALSE,10,10 Gold Coins,Drop,FALSE,Summons a sentry | Summons a lunar portal to shoot lasers at your enemies,Sentries,Endgame
+Mace,5011,Mace,Melee,18,Average,Very slow,FALSE,1,2 Gold Coins,Chest,TRUE,Can be upgraded with torches,Flails,Pre-Bosses
+Magic_Dagger,517,Magic Dagger,Magic,35,Weak,Insanely fast,TRUE,4,5 Gold Coins,Drop,FALSE,A magical returning dagger,,Pre-mechanical bosses
+Magic_Missile,113,Magic Missile,Magic,35,Very strong,Fast,FALSE,2,1 Gold 75 Silver Coins,Chest,TRUE,Casts a controllable missile,Wands,Pre-Wall of Flesh
+Magical_Harp,494,Magical Harp,Magic,42,Very weak,Very fast,TRUE,5,4 Gold Coins,Crafting,FALSE,,,Pre-Plantera
+Magnet_Sphere,1266,Magnet Sphere,Magic,48,Average,Very fast,FALSE,8,10 Gold Coins,Drop,FALSE,,Spell Tomes,Pre-Golem
+Malaise,3279,Malaise,Melee,16,Average,Fast,FALSE,1,1 Gold Coin,Crafting,FALSE,,Yoyos,Pre-Bosses
+Mandible_Blade,3772,Mandible Blade,Melee,16,Average,Very fast,TRUE,2,10 Silver Coins,Drop,FALSE,,Swords,Pre-Bosses
+Marrow,682,Marrow,Ranged,53,Average,Very fast,TRUE,5,54 Silver Coins,Drop,FALSE,,Bows,Pre-mechanical bosses
+Medusa_Head,3269,Medusa Head,Magic,40,Very weak,Very fast,TRUE,4,4 Gold Coins,Drop,FALSE,,,Pre-mechanical bosses
+Megashark,533,Megashark,Ranged,25,Extremely weak,Insanely fast,TRUE,5,7 Gold Coins,Crafting,FALSE,50% chance to not consume ammo | 'Minishark's older brother',Guns,Pre-Plantera
+Meowmere,3063,Meowmere,Melee,200,Strong,Very fast,TRUE,10,20 Gold Coins,Drop,TRUE,,Swords,Endgame
+Meteor_Staff,2750,Meteor Staff,Magic,50,Average,Very fast,TRUE,5,2 Gold Coins,Crafting,FALSE,Showers meteors,Wands,Pre-mechanical bosses
+Minishark,98,Minishark,Ranged,6,No knockback,Insanely fast,TRUE,2,7 Gold Coins,Buy,TRUE,"33% chance to not consume ammo | 'Half shark, half gun, completely awesome.'",Guns,Pre-Bosses
+Molten_Fury,120,Molten Fury,Ranged,31,Very weak,Fast,FALSE,3,54 Silver Coins,Crafting,FALSE,Lights wooden arrows ablaze,Bows,Pre-Skeletron
+Morning_Star,4679,Morning Star,Summon,165,Extremely strong,Slow,FALSE,8,6 Gold Coins,Drop,FALSE,5 summon tag damage | 5% summon tag critical strike chance | Your summons will focus struck enemies,Whips,Pre-Golem
+Muramasa,155,Muramasa,Melee,24,Very weak,Very fast,TRUE,2,1 Gold 75 Silver Coins,Chest,TRUE,,Swords,Pre-Wall of Flesh
+Mushroom_Spear,756,Mushroom Spear,Melee,60,Strong,Very slow,FALSE,7,14 Gold Coins,Buy,FALSE,,Spears,Pre-Plantera
+Musket,96,Musket,Ranged,31,Average,Slow,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,"I have to be ready, said the minuteman'",Guns,Pre-Bosses
+Mythril_Halberd,390,Mythril Halberd,Melee,45,Average,Average,FALSE,4,1 Gold 35 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Mythril_Repeater,436,Mythril Repeater,Ranged,39,Very weak,Very fast,TRUE,4,1 Gold 80 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Mythril_Sword,484,Mythril Sword,Melee,50,Average,Very fast,TRUE,4,2 Gold 7 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Nail_Gun,3107,Nail Gun,Ranged,85,No knockback,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,,Launchers,Pre-Golem
+Nebula_Arcanum,3476,Nebula Arcanum,Magic,70,Average,Average,TRUE,10,10 Gold Coins,Crafting,FALSE,Conjure masses of astral energy to chase down your foes',,Pre-Moon Lord
+Nebula_Blaze,3542,Nebula Blaze,Magic,130,Very weak,Very fast,TRUE,10,10 Gold Coins,Crafting,FALSE,From Orion's belt to the palm of your hand',,Pre-Moon Lord
+Nettle_Burst,788,Nettle Burst,Magic,35,Extremely weak,Fast,TRUE,7,4 Gold Coins,Drop,FALSE,Ignores 10 points of enemy Defense,Wands,Pre-Golem
+Night%27s_Edge,273,Night's Edge,Melee,40,Average,Fast,TRUE,3,4 Gold Coins,Crafting,TRUE,,Swords,Pre-Wall of Flesh
+Nightglow,4952,Nightglow,Magic,50,Very weak,Very slow,TRUE,8,5 Gold Coins,Drop,FALSE,,,Pre-Lunatic Cultist
+Nimbus_Rod,1244,Nimbus Rod,Magic,30,No knockback,Fast,FALSE,6,3 Gold 50 Silver Coins,Drop,FALSE,Summons a cloud to rain down on your foes,,Pre-mechanical bosses
+North_Pole,1947,North Pole,Melee,80,Strong,Average,FALSE,7,9 Gold Coins,Drop,FALSE,Shoots an icy spear that rains snowflakes,Spears,Pre-Golem
+Obsidian_Swordfish,2331,Obsidian Swordfish,Melee,70,Strong,Very fast,FALSE,7,1 Gold Coin,Fishing,FALSE,,Spears,Pre-mechanical bosses
+Onyx_Blaster,3788,Onyx Blaster,Ranged,24,Strong,Extremely slow,FALSE,4,5 Gold Coins,Crafting,FALSE,,Guns,Pre-mechanical bosses
+Optic_Staff,2535,Optic Staff,Summon,24,Very weak,Very slow,TRUE,5,2 Gold Coins,Crafting,FALSE,Summons twins to fight for you,Summons,Pre-Plantera
+Orange_Zapinator,4348,Orange Zapinator,Magic,100,Average,Very slow,FALSE,5,10 Gold Coins,Buy,FALSE,It might be broken',Magic Guns,Pre-mechanical bosses
+Orichalcum_Halberd,1193,Orichalcum Halberd,Melee,46,Average,Fast,FALSE,4,1 Gold 65 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Orichalcum_Repeater,1194,Orichalcum Repeater,Ranged,40,Very weak,Very fast,TRUE,4,2 Gold 20 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Orichalcum_Sword,1192,Orichalcum Sword,Melee,59,Average,Fast,TRUE,4,2 Gold 53 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Paintball_Gun,3350,Paintball Gun,Ranged,12,Extremely weak,Fast,FALSE,2,50 Silver Coins,Drop,FALSE,,Guns,Pre-Bosses
+Paladin%27s_Hammer,1513,Paladin's Hammer,Melee,90,Very strong,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,A powerful returning hammer,Boomerangs,Pre-Golem
+Palladium_Pike,1186,Palladium Pike,Melee,44,Average,Average,FALSE,4,1 Gold 20 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Palladium_Repeater,1187,Palladium Repeater,Ranged,37,Very weak,Fast,TRUE,4,1 Gold 60 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Palladium_Sword,1185,Palladium Sword,Melee,49,Average,Fast,TRUE,4,1 Gold 84 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Palm_Wood_Bow,2515,Palm Wood Bow,Ranged,6,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Palm_Wood_Sword,2517,Palm Wood Sword,Melee,8,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Pearlwood_Bow,661,Pearlwood Bow,Ranged,12,No knockback,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Pearlwood_Sword,659,Pearlwood Sword,Melee,30,Strong,Very fast,TRUE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Pew-matic_Horn,5117,Pew-matic Horn,Ranged,20,Extremely weak,Very fast,TRUE,2,1 Gold 50 Silver Coins,Drop,FALSE,Converts bullets into random stuff | 'ALLOWS WIRELESS TRANSFER OF INJURY!',Guns,Pre-Skeletron
+Phantasm,3540,Phantasm,Ranged,50,Very weak,Very fast,TRUE,10,10 Gold Coins,Crafting,FALSE,66% chance to not consume ammo,Bows,Pre-Moon Lord
+Phantom_Phoenix,3854,Phantom Phoenix,Ranged,32,Very weak,Very fast,TRUE,5,1 Gold Coin,Drop,FALSE,Harnesses the power of undying flames,Bows,Pre-Plantera
+Phoenix_Blaster,219,Phoenix Blaster,Ranged,30,Very weak,Very fast,FALSE,3,3 Gold 50 Silver Coins,Crafting,FALSE,,Guns,Pre-Wall of Flesh
+Piranha_Gun,1156,Piranha Gun,Ranged,38,Extremely weak,Average,FALSE,8,20 Gold Coins,Chest,FALSE,Latches on to enemies for continuous damage,Specialist,Pre-Golem
+Pirate_Staff,2584,Pirate Staff,Summon,40,Average,Very slow,TRUE,5,1 Gold Coin,Drop,FALSE,Summons pirates to fight for you,Summons,Pre-mechanical bosses
+Platinum_Bow,3480,Platinum Bow,Ranged,13,No knockback,Fast,FALSE,0,21 Silver Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Platinum_Broadsword,3484,Platinum Broadsword,Melee,16,Strong,Very fast,FALSE,0,27 Silver Coins,Crafting,TRUE,,Swords,Pre-Bosses
+Platinum_Shortsword,3483,Platinum Shortsword,Melee,13,Average,Very fast,FALSE,0,21 Silver Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Poison_Staff,1308,Poison Staff,Magic,43,Average,Very slow,TRUE,6,4 Gold Coins,Drop,TRUE,Shoots a poison fang that pierces multiple enemies,Wands,Pre-mechanical bosses
+Possessed_Hatchet,1122,Possessed Hatchet,Melee,80,Average,Very fast,TRUE,7,7 Gold Coins,Drop,FALSE,Chases after your enemy,Boomerangs,Pre-Lunatic Cultist
+Proximity_Mine_Launcher,760,Proximity Mine Launcher,Ranged,80,Weak,Extremely slow,TRUE,8,7 Gold Coins,Buy,FALSE,Mines deal triple damage when armed,Launchers,Pre-Golem
+Psycho_Knife,3106,Psycho Knife,Melee,85,Weak,Insanely fast,TRUE,8,10 Gold Coins,Drop,FALSE,Allows you to go into stealth mode,Swords,Pre-Golem
+Pulse_Bow,2223,Pulse Bow,Ranged,80,Very weak,Very fast,TRUE,8,9 Gold Coins,Buy,FALSE,Shoots a charged arrow,Bows,Pre-Plantera
+Purple_Clubberfish,2330,Purple Clubberfish,Melee,35,Very strong,Slow,TRUE,1,1 Gold Coin,Fishing,FALSE,,Swords,Pre-Bosses
+Pygmy_Staff,1157,Pygmy Staff,Summon,40,Very weak,Average,TRUE,7,7 Gold Coins,Drop,FALSE,Summons a Pygmy to fight for you,Summons,Pre-Golem
+Quad-Barrel_Shotgun,4703,Quad-Barrel Shotgun,Ranged,14,Strong,Extremely slow,FALSE,3,7 Gold Coins,Buy,FALSE,When 2 or 3 just doesn't cut it',Guns,Pre-Wall of Flesh
+Queen_Spider_Staff,2366,Queen Spider Staff,Summon,26,Very strong,Average,FALSE,4,5 Gold Coins,Crafting,FALSE,Summons a sentry | Summons a spider queen to spit eggs at your enemies,Sentries,Pre-mechanical bosses
+Rainbow_Crystal_Staff,3571,Rainbow Crystal Staff,Summon,130,Very strong,Average,FALSE,10,10 Gold Coins,Drop,FALSE,"Summons a sentry | Summons a radiant crystal that banishes your enemies | 'The colors, Duke, the colors!'",Sentries,Endgame
+Rainbow_Gun,1260,Rainbow Gun,Magic,45,Very weak,Very slow,FALSE,8,20 Gold Coins,Chest,FALSE,Shoots a rainbow that does continuous damage,Magic Guns,Pre-Golem
+Rainbow_Rod,495,Rainbow Rod,Magic,50,Average,Fast,FALSE,5,4 Gold Coins,Crafting,FALSE,Casts a controllable rainbow,Wands,Pre-Plantera
+Rally,3285,Rally,Melee,14,Weak,Fast,FALSE,1,50 Silver Coins,Drop,FALSE,,Yoyos,Pre-Bosses
+Raven_Staff,1802,Raven Staff,Summon,55,Very weak,Average,TRUE,8,10 Gold Coins,Drop,FALSE,Summons a raven to fight for you,Summons,Pre-Golem
+Razorblade_Typhoon,2622,Razorblade Typhoon,Magic,85,Average,Very slow,TRUE,8,5 Gold Coins,Drop,FALSE,Casts fast moving razorwheels,Spell Tomes,Pre-Lunatic Cultist
+Razorpine,1930,Razorpine,Magic,48,Weak,Insanely fast,TRUE,8,9 Gold Coins,Drop,FALSE,Shoots razor sharp pine needles,Wands,Pre-Golem
+Red_Ryder,1870,Red Ryder,Ranged,20,Weak,Very slow,TRUE,1,2 Gold Coins,Chest,FALSE,Don't shoot your eye out!',Guns,Pre-Bosses
+Red%27s_Throw,3287,Red's Throw,Melee,70,Average,Fast,FALSE,9,4 Gold Coins,Drop,FALSE,Great for impersonating devs!',Yoyos,Pre-Plantera
+Resonance_Scepter,5065,Resonance Scepter,Magic,70,Average,Fast,TRUE,5,10 Gold Coins,Drop,FALSE,,Wands,Pre-Golem
+Revolver,2269,Revolver,Ranged,20,Weak,Fast,FALSE,2,2 Gold Coins,Buy,FALSE,,Guns,Pre-Bosses
+Rich_Mahogany_Bow,658,Rich Mahogany Bow,Ranged,6,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Rich_Mahogany_Sword,656,Rich Mahogany Sword,Melee,8,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Rocket_Launcher,759,Rocket Launcher,Ranged,55,Weak,Average,TRUE,8,8 Gold Coins,Drop,FALSE,Does extra damage on a direct hit,Launchers,Pre-Golem
+Ruby_Staff,743,Ruby Staff,Magic,21,Average,Average,TRUE,1,40 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Ruler,486,Ruler,Melee,12,Extremely weak,Very fast,TRUE,1,2 Silver Coins,Buy,FALSE,,Swords,Pre-Bosses
+S.D.M.G.,1553,S.D.M.G.,Ranged,85,Very weak,Insanely fast,TRUE,10,15 Gold Coins,Drop,FALSE,66% chance to not consume ammo | 'It came from the edge of space',Guns,Endgame
+Sandgun,266,Sandgun,Ranged,30,Average,Very fast,TRUE,2,20 Silver Coins,Crafting,FALSE,This is a good idea!',Specialist,Pre-Bosses
+Sanguine_Staff,4269,Sanguine Staff,Summon,35,Very weak,Very slow,TRUE,4,5 Gold Coins,Drop,FALSE,Summons a sanguine bat to fight for you,Summons,Pre-mechanical bosses
+Sapphire_Staff,741,Sapphire Staff,Magic,18,Weak,Slow,TRUE,1,20 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Scourge_of_the_Corruptor,1571,Scourge of the Corruptor,Melee,70,Average,Very fast,TRUE,8,20 Gold Coins,Chest,FALSE,A powerful javelin that unleashes tiny eaters,,Pre-Golem
+Seedler,3018,Seedler,Melee,50,Average,Fast,TRUE,5,10 Gold Coins,Drop,TRUE,,Swords,Pre-Golem
+Sergeant_United_Shield,4760,Sergeant United Shield,Melee,80,Very weak,Very slow,FALSE,5,7 Gold Coins,Buy,FALSE,I can do this all day',Boomerangs,Pre-mechanical bosses
+Shadewood_Bow,923,Shadewood Bow,Ranged,8,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Shadewood_Sword,921,Shadewood Sword,Melee,11,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Shadow_Jousting_Lance,4789,Shadow Jousting Lance,Melee,130,Insane,Fast,FALSE,8,10 Gold Coins,Drop,FALSE,Build momentum to increase attack power,,Pre-Golem
+Shadowbeam_Staff,1444,Shadowbeam Staff,Magic,80,Weak,Very fast,TRUE,8,6 Gold Coins,Drop,FALSE,Creates a shadow beam that bounces off walls,Wands,Pre-Golem
+Shadowflame_Bow,3052,Shadowflame Bow,Ranged,47,Average,Very fast,TRUE,5,2 Gold Coins,Drop,FALSE,Shoots Shadowflame Arrows,Bows,Pre-mechanical bosses
+Shadowflame_Hex_Doll,3053,Shadowflame Hex Doll,Magic,32,Weak,Fast,TRUE,5,2 Gold Coins,Drop,FALSE,Summons Shadowflame tentacles to strike your foes,,Pre-mechanical bosses
+Shadowflame_Knife,3054,Shadowflame Knife,Melee,38,Average,Very fast,TRUE,5,2 Gold Coins,Drop,FALSE,Inflicts Shadowflame on hit,,Pre-mechanical bosses
+Shotgun,534,Shotgun,Ranged,24,Strong,Very slow,FALSE,4,5 Gold Coins,Buy,TRUE,Fires a spread of bullets,Guns,Pre-mechanical bosses
+Shroomerang,4764,Shroomerang,Melee,23,Strong,Very fast,FALSE,1,60 Silver Coins,Drop,TRUE,,Boomerangs,Pre-Bosses
+Silver_Bow,3510,Silver Bow,Ranged,9,No knockback,Average,FALSE,0,7 Silver Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Silver_Broadsword,3514,Silver Broadsword,Melee,14,Average,Very fast,FALSE,0,9 Silver Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Silver_Shortsword,3513,Silver Shortsword,Melee,9,Weak,Very fast,FALSE,0,7 Silver Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Sky_Dragon%27s_Fury,3858,Sky Dragon's Fury,Melee,140,Average,Average,TRUE,8,5 Gold Coins,Drop,FALSE,Right click while holding for an alternate attack!,,Pre-Lunatic Cultist
+Sky_Fracture,3787,Sky Fracture,Magic,38,Average,Very fast,TRUE,4,6 Gold Coins,Crafting,FALSE,,Wands,Pre-mechanical bosses
+Slap_Hand,3258,Slap Hand,Melee,55,Insane,Very fast,TRUE,4,5 Gold Coins,Buy,FALSE,,Swords,Pre-mechanical bosses
+Sleepy_Octopod,3835,Sleepy Octopod,Melee,50,Strong,Average,TRUE,5,1 Gold Coin,Drop,FALSE,Charges power as it is swung to smash enemies,,Pre-Plantera
+Slime_Staff,1309,Slime Staff,Summon,8,Very weak,Average,TRUE,4,2 Gold Coins,Drop,FALSE,Summons a baby slime to fight for you,Summons,Pre-Bosses
+Snapthorn,4913,Snapthorn,Summon,18,Extremely weak,Average,FALSE,3,1 Gold Coin,Crafting,FALSE,6 summon tag damage | Your summons will focus struck enemies | Strike enemies to gain attack speed,Whips,Pre-Bosses
+Sniper_Rifle,1254,Sniper Rifle,Ranged,185,Very strong,Very slow,FALSE,8,8 Gold Coins,Drop,FALSE,"Shoots a powerful, high velocity bullet | Right click to zoom out",Guns,Pre-Golem
+Snowball_Cannon,1319,Snowball Cannon,Ranged,10,Extremely weak,Very fast,TRUE,1,2 Gold Coins,Chest,FALSE,,Specialist,Pre-Bosses
+Snowman_Cannon,1946,Snowman Cannon,Ranged,67,Weak,Very fast,TRUE,8,9 Gold Coins,Drop,FALSE,Launches homing missiles,Launchers,Pre-Golem
+Solar_Eruption,3473,Solar Eruption,Melee,105,Very weak,Very fast,TRUE,10,10 Gold Coins,Crafting,FALSE,Strike with the fury of the sun',Flails,Pre-Moon Lord
+Space_Gun,127,Space Gun,Magic,17,Extremely weak,Very fast,TRUE,1,40 Silver Coins,Crafting,FALSE,,Magic Guns,Pre-Skeletron
+Spear,280,Spear,Melee,8,Strong,Slow,FALSE,0,2 Silver Coins,Chest,TRUE,,Spears,Pre-Bosses
+Spectre_Staff,1446,Spectre Staff,Magic,65,Average,Fast,TRUE,8,6 Gold Coins,Drop,FALSE,Summons a lost soul to chase your foes,Wands,Pre-Golem
+Spider_Staff,2551,Spider Staff,Summon,26,Very weak,Very slow,TRUE,4,1 Gold Coin,Crafting,FALSE,Summons spiders to fight for you,Summons,Pre-mechanical bosses
+Spinal_Tap,5074,Spinal Tap,Summon,27,Very weak,Average,FALSE,2,1 Gold 50 Silver Coins,Crafting,FALSE,7 summon tag damage | Your summons will focus struck enemies | Performs better against multiple targets than most whips | 'This goes to eleven',Whips,Pre-Wall of Flesh
+Spirit_Flame,3779,Spirit Flame,Magic,85,Average,Fast,TRUE,4,1 Gold Coin,Crafting,FALSE,,,Pre-mechanical bosses
+Staff_of_Earth,1296,Staff of Earth,Magic,125,Very strong,Fast,FALSE,7,7 Gold Coins,Drop,FALSE,Summons a powerful boulder,Wands,Pre-Lunatic Cultist
+Staff_of_the_Frost_Hydra,1572,Staff of the Frost Hydra,Summon,100,Very strong,Average,FALSE,8,20 Gold Coins,Chest,FALSE,Summons a sentry | Summons a powerful frost hydra to spit ice at your enemies,Sentries,Pre-Golem
+Stake_Launcher,1835,Stake Launcher,Ranged,75,Strong,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,,Bows,Pre-Golem
+Star_Cannon,197,Star Cannon,Ranged,55,Very weak,Very fast,TRUE,2,10 Gold Coins,Crafting,TRUE,Shoots fallen stars,Specialist,Pre-Skeletron
+Star_Wrath,3065,Star Wrath,Melee,170,Strong,Very fast,TRUE,10,20 Gold Coins,Drop,TRUE,Causes stars to rain from the sky,Swords,Endgame
+Stardust_Cell_Staff,3474,Stardust Cell Staff,Summon,60,Very weak,Very slow,TRUE,10,10 Gold Coins,Crafting,FALSE,Summons a stardust cell to fight for you | 'Cultivate the most beautiful cellular infection',Summons,Pre-Moon Lord
+Stardust_Dragon_Staff,3531,Stardust Dragon Staff,Summon,40,Very weak,Very slow,TRUE,10,10 Gold Coins,Crafting,FALSE,Summons a stardust dragon to fight for you | 'Who needs a horde of minions when you have a giant dragon?',Summons,Pre-Moon Lord
+Starfury,65,Starfury,Melee,25,Average,Very fast,FALSE,2,1 Gold Coin,Chest,TRUE,Causes stars to rain from the sky | 'Forged with the fury of heaven',Swords,Pre-Bosses
+Starlight,4923,Starlight,Melee,80,Weak,Very fast,TRUE,8,5 Gold Coins,Drop,FALSE,,Swords,Pre-Lunatic Cultist
+Stellar_Tune,4715,Stellar Tune,Magic,85,Extremely weak,Very fast,TRUE,5,10 Gold Coins,Drop,FALSE,These chords are out of this world',,Pre-Lunatic Cultist
+Storm_Spear,4061,Storm Spear,Melee,14,Average,Average,FALSE,1,30 Silver Coins,Chest,FALSE,,Spears,Pre-Bosses
+Stylish_Scissors,3352,Stylish Scissors,Melee,14,Average,Very fast,FALSE,2,50 Silver Coins,Drop,FALSE,,Swords,Pre-Bosses
+Stynger,1258,Stynger,Ranged,45,Average,Fast,TRUE,7,7 Gold Coins,Drop,FALSE,Shoots an explosive bolt | Does extra damage on a direct hit,Specialist,Pre-Lunatic Cultist
+Sunfury,220,Sunfury,Melee,64,Strong,Very slow,FALSE,3,2 Gold 50 Silver Coins,Chest,FALSE,,Flails,Pre-Wall of Flesh
+Super_Star_Shooter,4060,Super Star Shooter,Ranged,60,Average,Very fast,TRUE,3,10 Gold Coins,Crafting,FALSE,"Sure, Brain, but where are you going to get enough stars for this?'",Specialist,Pre-Plantera
+Swordfish,2332,Swordfish,Melee,19,Average,Very fast,FALSE,2,50 Silver Coins,Fishing,FALSE,,Swords,Pre-Bosses
+Tactical_Shotgun,679,Tactical Shotgun,Ranged,29,Strong,Slow,TRUE,8,8 Gold Coins,Drop,FALSE,,Guns,Pre-Golem
+Tempest_Staff,2621,Tempest Staff,Summon,50,Very weak,Very slow,TRUE,8,5 Gold Coins,Drop,FALSE,Summons sharknados to fight for you,Summons,Pre-Lunatic Cultist
+Tendon_Bow,796,Tendon Bow,Ranged,19,Extremely weak,Average,FALSE,1,36 Silver Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Tentacle_Spike,5094,Tentacle Spike,Melee,20,Average,Fast,FALSE,2,50 Silver Coins,Drop,FALSE,Embeds damaging spikes in enemies | 'Never grab the pointy end.',Swords,Pre-Bosses
+Terra_Blade,757,Terra Blade,Melee,85,Strong,Very fast,TRUE,8,20 Gold Coins,Crafting,TRUE,,Swords,Pre-Golem
+Terragrim,4144,Terragrim,Melee,17,Very weak,Fast,FALSE,2,5 Gold Coins,Drop,FALSE,Unleashes a dicing flurry,,Pre-Bosses
+Terraprisma,5005,Terraprisma,Summon,90,Weak,Very slow,TRUE,5,20 Gold Coins,Drop,FALSE,Summons an Enchanted Sword to fight for you,Summons,Pre-Lunatic Cultist
+Terrarian,3389,Terrarian,Melee,190,Strong,Fast,FALSE,10,10 Gold Coins,Drop,FALSE,,Yoyos,Endgame
+The_Bee%27s_Knees,2888,The Bee's Knees,Ranged,23,Very weak,Fast,FALSE,3,2 Gold Coins,Drop,FALSE,Wooden arrows turn into a column of bees,Bows,Pre-Skeletron
+The_Eye_of_Cthulhu,3292,The Eye of Cthulhu,Melee,115,Weak,Fast,FALSE,8,12 Gold 50 Silver Coins,Drop,FALSE,,Yoyos,Pre-Golem
+The_Horseman%27s_Blade,1826,The Horseman's Blade,Melee,150,Very strong,Average,TRUE,8,10 Gold Coins,Drop,TRUE,Summons Pumpkin heads to attack your enemies,Swords,Pre-Golem
+The_Meatball,801,The Meatball,Melee,34,Average,Very slow,FALSE,1,54 Silver Coins,Crafting,FALSE,,Flails,Pre-Skeletron
+The_Rotted_Fork,802,The Rotted Fork,Melee,17,Average,Slow,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,,Spears,Pre-Bosses
+The_Undertaker,800,The Undertaker,Ranged,19,Very weak,Very fast,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,,Guns,Pre-Bosses
+Thorn_Chakram,191,Thorn Chakram,Melee,25,Very strong,Very fast,FALSE,3,1 Gold Coin,Crafting,FALSE,,Boomerangs,Pre-Bosses
+Thunder_Zapper,4062,Thunder Zapper,Magic,20,Very weak,Very fast,TRUE,1,30 Silver Coins,Chest,FALSE,,Wands,Pre-Bosses
+Tin_Bow,3498,Tin Bow,Ranged,7,No knockback,Average,FALSE,0,1 Silver 5 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Tin_Broadsword,3502,Tin Broadsword,Melee,10,Average,Very fast,FALSE,0,1 Silver 35 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Tin_Shortsword,3501,Tin Shortsword,Melee,7,Weak,Very fast,FALSE,0,1 Silver 5 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Titanium_Repeater,1201,Titanium Repeater,Ranged,43,Very weak,Very fast,TRUE,4,2 Gold 80 Silver Coins,Crafting,FALSE,,Bows,Pre-mechanical bosses
+Titanium_Sword,1199,Titanium Sword,Melee,61,Average,Very fast,TRUE,4,3 Gold 22 Silver Coins,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Titanium_Trident,1200,Titanium Trident,Melee,48,Strong,Fast,FALSE,4,2 Gold 10 Silver Coins,Crafting,FALSE,,Spears,Pre-mechanical bosses
+Tome_of_Infinite_Wisdom,3852,Tome of Infinite Wisdom,Magic,36,Very strong,Fast,TRUE,5,1 Gold Coin,Drop,FALSE,Gotta wonder who stuck a tome of infinite wisdom on a stick... | Right click to cast a powerful tornado,Wands,Pre-Plantera
+Topaz_Staff,740,Topaz Staff,Magic,16,Weak,Very slow,FALSE,0,6 Silver Coins,Crafting,FALSE,,Wands,Pre-Bosses
+Toxic_Flask,3105,Toxic Flask,Magic,52,Weak,Very slow,FALSE,8,10 Gold Coins,Drop,FALSE,,,Pre-Golem
+Toxikarp,3210,Toxikarp,Ranged,43,Very weak,Very fast,TRUE,5,4 Gold Coins,Fishing,FALSE,Spits toxic bubbles,Specialist,Pre-mechanical bosses
+Tragic_Umbrella,4707,Tragic Umbrella,Melee,15,Average,Fast,FALSE,2,2 Gold Coins,Buy,FALSE,You will fall slower while holding this,Swords,Pre-Wall of Flesh
+Trident,277,Trident,Melee,14,Average,Slow,FALSE,1,20 Silver Coins,Chest | Crafting,FALSE,Increases mobility in water when held | Hold UP to descend slower,Spears,Pre-Bosses
+Trimarang,5298,Trimarang,Melee,21,Average,Very fast,TRUE,3,2 Gold Coins,Crafting,FALSE,Three Boomerangs are better than one',Boomerangs,Pre-Bosses
+True_Excalibur,674,True Excalibur,Melee,72,Average,Very fast,TRUE,8,10 Gold Coins,Crafting,TRUE,,Swords,Pre-Plantera
+True_Night%27s_Edge,675,True Night's Edge,Melee,70,Average,Slow,TRUE,8,10 Gold Coins,Crafting,TRUE,,Swords,Pre-Plantera
+Tsunami,2624,Tsunami,Ranged,53,Very weak,Fast,TRUE,8,5 Gold Coins,Drop,FALSE,Shoots 5 arrows at a time,Bows,Pre-Lunatic Cultist
+Tungsten_Bow,3486,Tungsten Bow,Ranged,10,No knockback,Average,FALSE,0,10 Silver 50 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Tungsten_Broadsword,3490,Tungsten Broadsword,Melee,14,Average,Very fast,FALSE,0,13 Silver 50 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Tungsten_Shortsword,3489,Tungsten Shortsword,Melee,10,Weak,Very fast,FALSE,0,10 Silver 50 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Umbrella,946,Umbrella,Melee,10,Average,Fast,FALSE,1,20 Silver Coins,Chest,FALSE,You will fall slower while holding this,Swords,Pre-Bosses
+Unholy_Trident,683,Unholy Trident,Magic,88,Strong,Very fast,TRUE,6,10 Gold Coins,Drop,FALSE,Summons the Devil's trident,Wands,Pre-Plantera
+Uzi,1265,Uzi,Ranged,30,Weak,Very fast,TRUE,7,7 Gold Coins,Drop,FALSE,"Shoots a powerful, high velocity bullet",Guns,Pre-mechanical bosses
+Valkyrie_Yoyo,3288,Valkyrie Yoyo,Melee,70,Average,Fast,FALSE,9,4 Gold Coins,Drop,FALSE,Great for impersonating devs!',Yoyos,Pre-Plantera
+Valor,3317,Valor,Melee,28,Weak,Fast,FALSE,3,1 Gold 75 Silver Coins,Chest,FALSE,,Yoyos,Pre-Wall of Flesh
+Vampire_Frog_Staff,4273,Vampire Frog Staff,Summon,11,Average,Very slow,TRUE,3,1 Gold Coin,Drop,FALSE,Summons a vampire frog to fight for you,Summons,Pre-Bosses
+Vampire_Knives,1569,Vampire Knives,Melee,29,Very weak,Very fast,TRUE,8,20 Gold Coins,Chest,FALSE,Rapidly throw life stealing daggers,,Pre-Golem
+Venom_Staff,2188,Venom Staff,Magic,44,Strong,Average,TRUE,7,7 Gold Coins,Crafting,FALSE,Shoots a venom fang that pierces multiple enemies,Wands,Pre-Plantera
+Venus_Magnum,1255,Venus Magnum,Ranged,50,Average,Very fast,TRUE,7,5 Gold Coins,Drop,FALSE,"Shoots a powerful, high velocity bullet",Guns,Pre-Golem
+Vilethorn,64,Vilethorn,Magic,10,Extremely weak,Average,FALSE,1,1 Gold 50 Silver Coins,Chest,FALSE,Summons a vile thorn,Wands,Pre-Bosses
+Volcano,121,Volcano,Melee,40,Strong,Very slow,FALSE,3,54 Silver Coins,Crafting,TRUE,It's made out of fire!',Swords,Pre-Skeletron
+Vortex_Beater,3475,Vortex Beater,Ranged,50,Very weak,Very fast,TRUE,10,10 Gold Coins,Crafting,FALSE,66% chance to not consume ammo | 'The catastrophic mixture of pew pew and boom boom.',Guns,Pre-Moon Lord
+Waffle%27s_Iron,5382,Waffle's Iron,Melee,50,Average,Fast,TRUE,5,1 Gold Coin,Drop,FALSE,It's Waffle Time!',Swords,Pre-Plantera
+Wand_of_Frosting,5147,Wand of Frosting,Magic,15,No knockback,Average,FALSE,1,15 Silver Coins,Crafting,FALSE,Shoots a little frost,Wands,Pre-Bosses
+Wand_of_Sparking,3069,Wand of Sparking,Magic,14,No knockback,Average,FALSE,1,20 Silver Coins,Buy | Chest,TRUE,Shoots a small spark,Wands,Pre-Bosses
+Wasp_Gun,1155,Wasp Gun,Magic,31,Extremely weak,Very fast,TRUE,8,10 Gold Coins,Drop,FALSE,Ignores 10 points of enemy Defense,Magic Guns,Pre-Golem
+Water_Bolt,165,Water Bolt,Magic,19,Average,Very fast,TRUE,2,1 Gold 50 Silver Coins,Drop,FALSE,Casts a slow moving bolt of water,Spell Tomes,Pre-Wall of Flesh
+Weather_Pain,5118,Weather Pain,Magic,13,Extremely weak,Very slow,FALSE,2,1 Gold 50 Silver Coins,Drop,FALSE,Ignores 10 points of enemy Defense | 'What a pane... heh',Wands,Pre-Skeletron
+Wooden_Boomerang,284,Wooden Boomerang,Melee,10,Average,Very fast,FALSE,1,20 Silver Coins,Chest,TRUE,,Boomerangs,Pre-Bosses
+Wooden_Bow,39,Wooden Bow,Ranged,4,No knockback,Average,FALSE,0,20 Copper Coins,Crafting,FALSE,,Bows,Pre-Bosses
+Wooden_Sword,24,Wooden Sword,Melee,7,Average,Very fast,FALSE,0,20 Copper Coins,Crafting,FALSE,,Swords,Pre-Bosses
+Wooden_Yoyo,3278,Wooden Yoyo,Melee,9,Very weak,Fast,FALSE,0,1 Silver Coin,Crafting,TRUE,,Yoyos,Pre-Bosses
+Xeno_Staff,2749,Xeno Staff,Summon,36,Very weak,Very slow,TRUE,8,10 Gold Coins,Drop,FALSE,Summons a UFO to fight for you,Summons,Pre-Lunatic Cultist
+Xenopopper,2797,Xenopopper,Ranged,45,Very weak,Fast,TRUE,8,10 Gold Coins,Drop,FALSE,,Guns,Pre-Lunatic Cultist
+Yelets,3286,Yelets,Melee,60,Weak,Fast,FALSE,7,5 Gold Coins,Drop,FALSE,,Yoyos,Pre-Plantera
+Zenith,4956,Zenith,Melee,190,Strong,Average,TRUE,10,20 Gold Coins,Crafting,FALSE,,,Endgame
+Zombie_Arm,1304,Zombie Arm,Melee,15,Average,Fast,FALSE,0,4 Silver Coins,Drop,TRUE,,Swords,Pre-Bosses
+Cobwhip,5473,Cobwhip,Summon,9,Extremely weak,Slow,,1,1 Silver 50 Copper Coins,Crafting,FALSE,,Whips,Pre-Bosses
+Slime_Spear,5687,Slime Spear,Melee,9,Strong,Fast,,0,50 Copper Coins,Crafting,FALSE,,Spears,Pre-Skeletron
+Slime_Whip,5688,Slime Whip,Summon,12,Extremely weak,Average,,1,50 Copper Coins,Crafting,FALSE,,Whips,Pre-Skeletron
+Soulscourge,5474,Soulscourge,Summon,17,Extremely weak,Average,,1,1 Gold Coin,Crafting,FALSE,,Whips,Pre-Bosses
+Vasculash,5475,Vasculash,Summon,19,Extremely weak,Average,,1,1 Gold Coin,Crafting,FALSE,,Whips,Pre-Bosses
+Starcrash,5476,Starcrash,Summon,18,Extremely weak,Average,,2,2 Gold Coins 50 Silver Coins,Crafting,FALSE,,Whips,Pre-Skeletron
+Vulgar_Display_of_Flower,5477,Vulgar Display of Flower,Summon,75,Very Weak,Average,,7,6 Gold Coins,Drop,FALSE,,Whips,Pre-Golem
+Electric_Eel,5478,Electric Eel,Summon,150,Very Weak,Average,,8,5 Gold Coins,Drop,FALSE,,Whips,Pre-Lunatic Cultist
+Constellation,5479,Constellation,Summon,130,Weak,Average,,10,10 Gold Coins,Crafting,FALSE,,Whips,Pre-Moon Lord
+Possession,5480,Possession,Summon,110,Weak,Average,,10,10 Gold Coins,Drop,FALSE,,Whips,Endgame
+Phaseblade,198,Phaseblade,Melee,26,Very Weak,Very fast,,1,54 Silver Coins,Crafting,TRUE,,Swords,Pre-Skeletron
+Phasesaber,3764,Phasesaber,Melee,50,Very Weak,Very fast,,4,1 Gold Coin,Crafting,FALSE,,Swords,Pre-mechanical bosses
+Flint,5462,Flint,Melee,70,Average,Very fast,,4,4 Gold Coins,Crafting,FALSE,,,Pre-mechanical bosses
+True_Copper_Shortsword,5669,True Copper Shortsword,Melee,190,Strong,Average,,10,20 Gold Coins,Crafting,FALSE,,,Endgame
+Barrel_Launcher,5460,Barrel Launcher,Ranged,100,Very Strong,Very slow,,4,4 Gold Coins,Drop,FALSE,,Specialist,Pre-mechanical bosses
+Killing_Deck,5461,Killing Deck,Magic,22,Average,Very fast,,4,4 Gold Coins,Buy,FALSE,,,Pre-mechanical bosses
+Axerang,5519,Axerang,Melee,20,Average,Very fast,,4,1 Gold Coin 50 Silver Coins,Crafting,TRUE,,Boomerangs,Pre-Bosses
+Cattiva,5663,Cattiva,Summon,9,Very weak,Very fast,,5,1 Gold Coin,Drop,FALSE,,Summons,Pre-Bosses
+Foxsparks,5664,Foxsparks,Summon,20,Very weak,Very fast,,4,1 Gold Coin,Drop,FALSE,,Summons,Pre-Bosses
+Mushroom_Staff,5456,Mushroom Staff,Summon,8,Very weak,Very slow,,2,30 Silver Coins,Crafting,FALSE,,Summons,Pre-Skeletron
+Barnacle_Staff,5463,Barnacle Staff,Summon,33,Very strong,Average,,4,4 Gold Coins,Fishing,FALSE,,Sentries,Pre-mechanical bosses
+Acorn_Slingshot,5629,Acorn Slingshot,Ranged,5,Weak,Very fast,,1,20 Silver Coins,Chest,FALSE,,Specialist,Pre-Bosses
