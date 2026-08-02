@@ -11,7 +11,7 @@ React web app to pick and sort favorite weapons from Terraria's game data on a d
 ### [unity puzzle slimecake](./unity-puzzle-slimecake) 
 Unity 2D grid puzzle platformer featuring level editor tools & Realtime ingame Undo feature in a non turnbased game.
 
-### [unity 2d boss fight framework](./unity-2d-boss-fight-framework) 
+### [unity 2d boss fight game](./unity-2d-boss-fight-game) 
 Unity 2.5D (with mix of 3D) Boss encounter game using inhouse coroutine state machines and dynamic skill systems, with 7 unique boss fights with nearly 100 patterns/mechanics.
 
 ### [unity dots multiplayer factory game](./unity-dots-multiplayer-factory-game) 
