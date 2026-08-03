@@ -1,13 +1,13 @@
 # Just The Boss Fights
 
-Unity 2.5D (with mix of 3D) Boss encounter game using inhouse coroutine state machines and dynamic skill systems, with 7 unique boss fights with nearly 100 patterns/mechanics.  
+Unity 2.5D boss encounter game with custom coroutine state machines and dynamic skill systems across 7 unique boss fights with nearly 100 enemy patterns.
 
-This game was developed at University of Utah's Capstone Games with a team of 30+ members.
+The script showcase highlights the coroutine state machine architecture, modular projectile/attack strategy framework, and player ability system.  
 
-The script showcase includes coroutine state machines, modular projectile/attack system, and a player ability framework.
+Developed at the University of Utah's Capstone Games program with a team of 30+ members.  
+Scripts showcased here are owned by me, with exception of Attack.cs which I architected and refactored, with another dev doing the initial implementation.
 
-Download & Play the game here!  https://store.steampowered.com/app/3572440/Just_the_Boss_Fights/
-
+**Steam Store Page:** [https://store.steampowered.com/app/3572440/Just_the_Boss_Fights/](https://store.steampowered.com/app/3572440/Just_the_Boss_Fights/)
 
 ## Tech Stack
 * **Engine:** Unity 3D (2.5D visuals, with mix of 2D and 3D boss mechanics)
@@ -20,7 +20,7 @@ Download & Play the game here!  https://store.steampowered.com/app/3572440/Just_
 ### [EnemyController.cs](./BossStateMachine/EnemyController.cs)
 * Abstract brain for boss state machines.
 * Manages state transitions, health event binding, phase checks, and sprite/animator lookups.
-* Caches active state MonoBehaviours in a dictionary to prevent overhead during pattern switches.
+* Caches active state MonoBehaviours in a dictionary to prevent allocation overhead during pattern switches.
 
 ### [EnemyState.cs](./BossStateMachine/EnemyState.cs)
 * Abstract base class for all boss phase states.
@@ -51,8 +51,8 @@ Download & Play the game here!  https://store.steampowered.com/app/3572440/Just_
 * Examples may be AB_HomingAttack (not ported over), where a boss pattern may home in towards player with an adjustable angle value, then a developer can simply set an attack to have this attack behavior for quick implementation & testing!
 
 ### [PlayerAbilityBase.cs](./PlayerAbilityFramework/PlayerAbilityBase.cs)
-* Abstract framework for player active skills.
-* Manages cooldown timing, mana checks, hotkey bindings, and interrupt lifecycle hooks.
+* Abstract framework for active player skills.
+* Manages cooldown timing, mana, hotkey bindings, and interrupt lifecycle hooks.
 
 ### [PlayerAbilityDash.cs](./PlayerAbilityFramework/PlayerAbilityDash.cs)
 * Player ability script for dash.
