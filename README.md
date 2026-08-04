@@ -3,6 +3,8 @@
 Showcases many of the cool dev projects I've worked on :\)  
 This includes private projects with proper details for context.
 
+Nearly all scripts showcased in this repo is my work! (Unity 2D boss fight game includes a refactored script)
+
 ## Showcased Projects
 
 ### [React Terraria Data Picker Web App](./react-terraria-data-picker) 
