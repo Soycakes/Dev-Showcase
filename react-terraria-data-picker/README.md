@@ -7,12 +7,12 @@ Import and Export CSV tools were developed to make it easy for developers to add
 **Live Website (Try it out!):** [https://soycakes.github.io/TerrariaWeapons/](https://soycakes.github.io/TerrariaWeapons/)  
 **Original Repository:** [https://github.com/Soycakes/TerrariaWeapons](https://github.com/Soycakes/TerrariaWeapons)
 
-# Tech Stack
+## Tech Stack
 * **Frontend:** React, Vite, Tailwind CSS, inline styling
 * **State & Storage:** Client side state using `localStorage` for persistent grid choices
 * **Data Tools:** Node.js scripts to parse CSV spreadsheet data and generate React data structures
 
-# Showcased Scripts
+## Showcased Scripts
 
 ### [App.jsx](./App.jsx)
 * Main app state and table controller.

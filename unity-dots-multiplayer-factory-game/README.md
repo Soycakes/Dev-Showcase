@@ -7,14 +7,14 @@ and includes support for dedicated servers running to handle chunkloading of gam
     
 Currently multiplayer tests have been successful, including tests of rendering over 4 million blocks, and various server authority & client prediction tests for inventory!
 
-# Tech Stack
+## Tech Stack
 * **Engine & Systems:** Unity DOTS (ECS, Job System, Burst Compiler)
   * The "Hyper Optimization" mainly for the factory machine logics
 * **Networking:** Server authoritative inventory with client prediction
   * Movement is simulated client side to prioritize smooth perfect gameplay in a co op setting (similar to Minecraft & Terraria). Because movement is client side, a light RPC is done for current stage of the game. Moving on, these will be refactored to use Netcode for Entities for server prediction & rollback as needed.
 * **Serialization:** Custom binary format with Run Length Encoding (RLE)
 
-# Showcased Scripts
+## Showcased Scripts
 ### [SaveWorldSerializer.cs](./SaveWorldSerializer.cs)
 * Handles world state saving and loading (terrain chunks, inventory, machines).
 * Snapshots ECS state synchronously on main thread and writes to disk asynchronously on a background worker.
