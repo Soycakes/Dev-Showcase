@@ -3,6 +3,7 @@ import { useLocale } from './hooks/useLocale'
 import { useOnboardingDemo } from './hooks/useOnboardingDemo'
 import { CATEGORIES } from './data/projects'
 import { Navbar } from './components/Navbar'
+import { SpaceBackground } from './components/SpaceBackground'
 import { WordRoller } from './components/WordRoller'
 import { TechBadge } from './components/TechIcon'
 import type { Category, L10n, Lang } from './data/types'
@@ -80,7 +81,7 @@ function ProjectCard({ project }: { project: ReturnType<typeof useFilter>['filte
       {project.bullets.length > 0 && (
         <ul className="mt-3 space-y-1">
           {project.bullets.map((b, i) => (
-            <li key={i} className="text-sm text-neutral-600 dark:text-neutral-400 before:mr-2 before:content-['—']">
+            <li key={i} className="text-sm text-neutral-600 dark:text-neutral-400 before:mr-2 before:content-['-']">
               <R s={b} />
             </li>
           ))}
@@ -102,7 +103,9 @@ export default function App() {
   const { demoLang, done, showTooltip, dismissTooltip } = useOnboardingDemo()
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950">
+    <div className="min-h-screen">
+      <SpaceBackground />
+      <div className="relative z-10">
       <Navbar showTooltip={showTooltip} onDismissTooltip={dismissTooltip} />
       <Hero demoLang={demoLang} demoDone={done} />
       <div id="projects" className="mx-auto max-w-5xl px-6 pb-24">
@@ -110,6 +113,7 @@ export default function App() {
         <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Projects">
           {filtered.map(p => <ProjectCard key={p.id} project={p} />)}
         </section>
+      </div>
       </div>
     </div>
   )

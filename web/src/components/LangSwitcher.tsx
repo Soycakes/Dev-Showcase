@@ -18,7 +18,6 @@ export function LangSwitcher({ showTooltip, onDismissTooltip }: Props) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
-  // Close on outside click
   useEffect(() => {
     if (!open) return
     function handler(e: MouseEvent) {

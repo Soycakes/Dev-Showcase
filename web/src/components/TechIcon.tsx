@@ -3,7 +3,6 @@ import { TECH_ICONS } from '../data/icons'
 interface Props {
   name: string
   size?: number
-  // 'brand' uses the official brand color, 'current' inherits CSS color
   color?: 'brand' | 'current'
   className?: string
 }
@@ -29,7 +28,6 @@ export function TechIcon({ name, size = 14, color = 'current', className = '' }:
   )
 }
 
-// Badge: icon (if available) + text label side by side
 export function TechBadge({ name }: { name: string }) {
   const hasIcon = Boolean(TECH_ICONS[name])
   return (

@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 
-// --- Single word slot ---
-
 interface SlotProps { word: string }
 
 function Slot({ word }: SlotProps) {
@@ -28,13 +26,8 @@ function Slot({ word }: SlotProps) {
 
   return (
     <span className="relative inline-block overflow-hidden" style={{ verticalAlign: 'baseline' }}>
-      {/*
-        Ghost drives the slot width (invisible, in normal flow).
-        Uses ENTERING word so wider incoming text is never clipped mid-roll.
-        Width snaps to entering size at animation start — hidden by the roll itself.
-      */}
       <span className="invisible select-none whitespace-nowrap" aria-hidden="true">
-        {isAnimating ? (entering || ' ') : (settled || ' ')}
+        {isAnimating ? (entering || ' ') : (settled || ' ')}
       </span>
 
       {!isAnimating && (
@@ -45,7 +38,7 @@ function Slot({ word }: SlotProps) {
 
       {isAnimating && (
         <span className="absolute inset-0 whitespace-nowrap animate-word-exit" aria-hidden="true">
-          {exiting || ' '}
+          {exiting || ' '}
         </span>
       )}
 
@@ -55,14 +48,12 @@ function Slot({ word }: SlotProps) {
           aria-hidden="true"
           onAnimationEnd={onEnterEnd}
         >
-          {entering || ' '}
+          {entering || ' '}
         </span>
       )}
     </span>
   )
 }
-
-// --- Word roller ---
 
 const N_BATCHES = 5
 const BATCH_INTERVAL_MS = 160
@@ -70,7 +61,6 @@ const BATCH_INTERVAL_MS = 160
 export interface WordRollerProps {
   text: string
   className?: string
-  // single=true: treat the whole string as one slot (for names where EN/KO word count differs a lot)
   single?: boolean
 }
 
