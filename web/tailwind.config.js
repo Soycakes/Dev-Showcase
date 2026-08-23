@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        mono: ['"Space Mono"', 'monospace'],
+      },
       keyframes: {
         wordExit: {
           '0%':   { transform: 'translateY(0)',    opacity: '1' },
