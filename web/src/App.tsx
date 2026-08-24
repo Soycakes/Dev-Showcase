@@ -1,15 +1,20 @@
+import { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useFilter } from './hooks/useFilter'
 import { useLocale } from './hooks/useLocale'
 import { useOnboardingDemo } from './hooks/useOnboardingDemo'
-import { CATEGORIES } from './data/projects'
+import { useQuestNavigation } from './hooks/useQuestNavigation'
 import { Navbar } from './components/Navbar'
 import { SpaceBackground } from './components/SpaceBackground'
+import { ProjectCard } from './components/ProjectCard'
+import { FilterBar } from './components/FilterBar'
+import { QuestRail } from './components/QuestRail'
+import { QuestDetail } from './components/QuestDetail'
 import { WordRoller } from './components/WordRoller'
-import { TechBadge } from './components/TechIcon'
-import type { Category, L10n, Lang } from './data/types'
+import type { Lang } from './data/types'
 
 const HERO_TEXT = {
-  name:    { en: 'Hyung Min Park', ko: '박형민' },
+  name: { en: 'Hyung Min Park', ko: '박형민' },
   tagline: { en: 'Software Engineer / Game Dev / AI Systems', ko: '소프트웨어 엔지니어 / 게임 개발 / AI 시스템' },
 }
 
@@ -39,81 +44,123 @@ function Hero({ demoLang, demoDone }: { demoLang: Lang; demoDone: boolean }) {
   )
 }
 
-function FilterBar({ active, onChange }: { active: Category | 'all'; onChange: (c: Category | 'all') => void }) {
-  const { t, lang } = useLocale()
-  const allLabel: L10n = { en: 'All', ko: '전체' }
-
-  return (
-    <div className="mx-auto max-w-5xl px-6">
-      <nav className="flex flex-wrap gap-2" aria-label="Project filter">
-        {([['all', allLabel]] as [string, L10n][])
-          .concat(Object.entries(CATEGORIES) as [Category, L10n][])
-          .map(([key, label]) => (
-            <button
-              key={key}
-              onClick={() => onChange(key as Category | 'all')}
-              aria-pressed={active === key}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium transition
-                ${active === key
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
-                  : 'border border-neutral-200 text-neutral-600 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500'
-                }`}
-            >
-              <WordRoller text={t(label)} single />
-            </button>
-          ))}
-      </nav>
-    </div>
-  )
-}
-
-function R({ s, single }: { s: L10n; single?: boolean }) {
-  const { t } = useLocale()
-  return <WordRoller text={t(s)} single={single} />
-}
-
-function ProjectCard({ project }: { project: ReturnType<typeof useFilter>['filtered'][number] }) {
-  return (
-    <article className="border border-neutral-200 p-5 dark:border-neutral-800" data-id={project.id}>
-      <h2 className="font-semibold text-neutral-900 dark:text-white"><R s={project.title} single /></h2>
-      <p className="mt-0.5 text-sm text-neutral-500"><R s={project.subtitle} single /> - {project.period}</p>
-      <p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400"><R s={project.summary} /></p>
-      {project.bullets.length > 0 && (
-        <ul className="mt-3 space-y-1">
-          {project.bullets.map((b, i) => (
-            <li key={i} className="text-sm text-neutral-600 dark:text-neutral-400 before:mr-2 before:content-['-']">
-              <R s={b} />
-            </li>
-          ))}
-        </ul>
-      )}
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        {project.stack.map(s => <TechBadge key={s} name={s} />)}
-      </div>
-      <div className="mt-4 flex gap-3">
-        {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noreferrer" className="text-xs font-medium text-neutral-500 underline-offset-2 hover:underline">Repo</a>}
-        {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-xs font-medium text-neutral-500 underline-offset-2 hover:underline">Live</a>}
-      </div>
-    </article>
-  )
-}
-
 export default function App() {
   const { active, setActive, filtered } = useFilter()
   const { demoLang, done, showTooltip, dismissTooltip } = useOnboardingDemo()
+  const [mode, setMode] = useState<'scroll' | 'quest'>('scroll')
+  const [activeId, setActiveId] = useState<string | null>(null)
+
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get('project')
+    if (id) { setActiveId(id); setMode('quest') }
+  }, [])
+
+  useEffect(() => {
+    if (mode !== 'quest' || !activeId) return
+    if (!filtered.some(p => p.id === activeId) && filtered.length > 0) {
+      setActiveId(filtered[0].id)
+    }
+  }, [filtered, mode, activeId])
+
+  function enterQuest(id: string) {
+    setActiveId(id)
+    setMode('quest')
+  }
+
+  function exitQuest() {
+    setMode('scroll')
+    setActiveId(null)
+    const url = new URL(window.location.href)
+    url.searchParams.delete('project')
+    window.history.pushState({}, '', url)
+  }
+
+  const activeIdx = filtered.findIndex(p => p.id === activeId)
+  const activeProject = filtered[activeIdx] ?? filtered[0] ?? null
+  const hasMultiple = filtered.length > 1
+  const nextProject = hasMultiple ? filtered[(activeIdx + 1) % filtered.length] : null
+  const prevProject = hasMultiple ? filtered[(activeIdx - 1 + filtered.length) % filtered.length] : null
+
+  useQuestNavigation({ filtered, activeId, setActiveId, exitQuest })
+
+  const isQuest = mode === 'quest'
 
   return (
-    <div className="min-h-screen">
+    <div className={isQuest ? 'h-screen overflow-hidden flex flex-col' : 'min-h-screen'}>
       <SpaceBackground />
-      <div className="relative z-10">
-      <Navbar showTooltip={showTooltip} onDismissTooltip={dismissTooltip} />
-      <Hero demoLang={demoLang} demoDone={done} />
-      <div id="projects" className="mx-auto max-w-5xl px-6 pb-24">
-        {/* <FilterBar active={active} onChange={setActive} /> */}
-        <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Projects">
-          {filtered.map(p => <ProjectCard key={p.id} project={p} />)}
-        </section>
-      </div>
+      <div className={`relative z-10 ${isQuest ? 'flex flex-col flex-1 overflow-hidden' : ''}`}>
+        <Navbar
+          showTooltip={showTooltip}
+          onDismissTooltip={dismissTooltip}
+          onLogoClick={isQuest ? exitQuest : undefined}
+        />
+
+        <AnimatePresence mode="wait">
+          {!isQuest ? (
+            <motion.div
+              key="scroll"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Hero demoLang={demoLang} demoDone={done} />
+              <div id="projects" className="mx-auto max-w-5xl px-6 pb-24">
+                <FilterBar active={active} onChange={setActive} />
+                <section className="space-y-4" aria-label="Projects">
+                  {filtered.map(p => (
+                    <div key={p.id} className="cursor-pointer" onClick={() => enterQuest(p.id)}>
+                      <ProjectCard project={p} />
+                    </div>
+                  ))}
+                </section>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="quest"
+              className="flex flex-1 overflow-hidden pl-[clamp(0px,calc(100vw_-_1260px),160px)]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="hidden lg:flex lg:flex-col w-[360px] shrink-0 h-full">
+                <QuestRail
+                  projects={filtered}
+                  activeId={activeId}
+                  filterActive={active}
+                  onFilterChange={setActive}
+                  onSelect={setActiveId}
+                  onBack={exitQuest}
+                />
+              </div>
+              <div className="flex-1 h-full overflow-hidden">
+                <AnimatePresence mode="wait">
+                  {activeProject && (
+                    <motion.div
+                      key={activeProject.id}
+                      className="h-full"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.18, ease: 'easeOut' }}
+                    >
+                      <QuestDetail
+                        project={activeProject}
+                        prevProject={prevProject}
+                        nextProject={nextProject}
+                        onPrev={() => prevProject && setActiveId(prevProject.id)}
+                        onNext={() => nextProject && setActiveId(nextProject.id)}
+                        onBack={exitQuest}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   )

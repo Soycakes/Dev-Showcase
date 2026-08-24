@@ -59,8 +59,8 @@ export const CFG = {
   lightModePlanetAlpha: 0.3,
 
   rocketScale: 0.5,
-  rocketLerp: 0.015,
-  rocketMaxTiltDeg: 75,
+  rocketLerp: 0.005,
+  rocketMaxTiltDeg: 80,
   rocketTiltDistance: 150, // px of horizontal offset for max tilt
   rocketOpacity: 0.4,
   flameOpacity: 0.2,

@@ -5,7 +5,7 @@ const WIP: { en: string; ko: string } = { en: 'WIP, Placeholder', ko: 'WIP, Plac
 export const projects: Project[] = [
   {
     id: 'mapdev',
-    title: { en: 'Multi-Agent Planning Harness', ko: '멀티 에이전트 계획 하네스' },
+    title: { en: 'Multi Agent Planning Harness', ko: '멀티 에이전트 계획 하네스' },
     subtitle: { en: 'MAPDev', ko: 'MAPDev' },
     period: 'Aug 2026 - Present',
     categories: ['ai-agents'],
@@ -18,7 +18,7 @@ export const projects: Project[] = [
   },
   {
     id: 'soylangraph',
-    title: { en: 'Multi-Agent Code Pipeline', ko: '멀티 에이전트 코드 파이프라인' },
+    title: { en: 'Multi Agent Code Pipeline', ko: '멀티 에이전트 코드 파이프라인' },
     subtitle: { en: 'SoyLangGraph', ko: 'SoyLangGraph' },
     period: 'Jul 2026 - Aug 2026',
     categories: ['ai-agents'],
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     bullets: [],
     media: [],
     snippets: [],
-    repoUrl: 'https://github.com/Soycakes/dev-showcase',
+    liveUrl: 'https://soycakes.itch.io/slime-cake',
   },
   {
     id: 'boss-fights',
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     bullets: [],
     media: [],
     snippets: [],
-    repoUrl: 'https://github.com/Soycakes/dev-showcase',
+    repoUrl: 'https://soycakes.github.io/TerrariaWeapons',
   },
   {
     id: 'dodgeball',
@@ -138,8 +138,8 @@ export const projects: Project[] = [
   },
   {
     id: 'lms-db',
-    title: { en: 'Learning Management System', ko: '학습 관리 시스템' },
-    subtitle: { en: 'Full-Stack DB Project', ko: '풀스택 DB 프로젝트' },
+    title: { en: 'Learning Management System DB Backend', ko: '학습 관리 시스템 DB 백엔드' },
+    subtitle: { en: 'Backend DB Project', ko: '백엔드 DB 프로젝트' },
     period: 'University',
     categories: ['fullstack', 'systems'],
     stack: ['C#', 'LINQ', 'SQL'],

@@ -3,22 +3,26 @@ import { useLocale } from '../hooks/useLocale'
 import { WordRoller } from './WordRoller'
 
 const NAV_LINKS = [
-  { href: '#projects', en: 'Projects', ko: '프로젝트' },
-  { href: '#contact',  en: 'Contact',  ko: '연락하기' },
+  { href: '#contact', en: 'Contact', ko: '연락하기' },
 ]
 
 interface NavbarProps {
   showTooltip: boolean
   onDismissTooltip: () => void
+  onLogoClick?: () => void
 }
 
-export function Navbar({ showTooltip, onDismissTooltip }: NavbarProps) {
+export function Navbar({ showTooltip, onDismissTooltip, onLogoClick }: NavbarProps) {
   const { lang } = useLocale()
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/80 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/80">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
-        <a href="#" className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-white">
+        <a
+          href="#"
+          onClick={onLogoClick ? (e) => { e.preventDefault(); onLogoClick() } : undefined}
+          className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-white"
+        >
           Luke Park
         </a>
         <div className="flex items-center gap-6">

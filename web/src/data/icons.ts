@@ -1,5 +1,5 @@
 import {
-  siPython, siTypescript, siJavascript, siCplusplus, siSharp, siKotlin,
+  siPython, siTypescript, siJavascript, siCplusplus, siSharp, siOpenjdk, siKotlin,
   siReact, siNextdotjs, siFastapi, siNodedotjs,
   siLangchain,
   siGooglegemini, siGooglesheets,
@@ -18,6 +18,7 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'NDK / C++': siCplusplus,
   'C#': siSharp,
   'LINQ': siSharp,
+  'Java': siOpenjdk,
   'Kotlin': siKotlin,
 
   'React': siReact,

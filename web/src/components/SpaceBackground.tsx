@@ -90,6 +90,12 @@ export function SpaceBackground() {
 
     resize()
 
+    let resizeTimer: ReturnType<typeof setTimeout>
+    function onResize() {
+      clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(resize, 150)
+    }
+
     function isDark() {
       const t = document.documentElement.getAttribute('data-theme')
       if (t === 'dark') return true
@@ -209,13 +215,14 @@ export function SpaceBackground() {
     }
 
     rafId = requestAnimationFrame(loop)
-    window.addEventListener('resize', resize)
+    window.addEventListener('resize', onResize)
     return () => {
       cancelAnimationFrame(rafId)
-      window.removeEventListener('resize', resize)
+      clearTimeout(resizeTimer)
+      window.removeEventListener('resize', onResize)
       window.removeEventListener('mousemove', onMouseMove)
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="pointer-events-none fixed inset-0 -z-10" aria-hidden="true" />
+  return <canvas ref={canvasRef} className="pointer-events-none fixed inset-0 z-0" aria-hidden="true" />
 }
