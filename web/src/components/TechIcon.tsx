@@ -1,4 +1,4 @@
-import { TECH_ICONS } from '../data/icons'
+import { TECH_ICONS, CUSTOM_ICONS } from '../data/icons'
 
 interface Props {
   name: string
@@ -17,6 +17,11 @@ function isDarkColor(hex: string): boolean {
 }
 
 export function TechIcon({ name, size = 14, color = 'current', className = '' }: Props) {
+  const customUrl = CUSTOM_ICONS[name]
+  if (customUrl) {
+    return <img src={customUrl} width={size} height={size} alt={name} className={className} />
+  }
+
   const icon = TECH_ICONS[name]
   if (!icon) return null
 
@@ -40,7 +45,7 @@ export function TechIcon({ name, size = 14, color = 'current', className = '' }:
 }
 
 export function TechBadge({ name }: { name: string }) {
-  const hasIcon = Boolean(TECH_ICONS[name])
+  const hasIcon = Boolean(TECH_ICONS[name] ?? CUSTOM_ICONS[name])
   return (
     <span className="inline-flex items-center gap-1 rounded-md bg-neutral-100 px-2 py-0.5 text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400">
       {hasIcon && <TechIcon name={name} size={11} color="brand" />}

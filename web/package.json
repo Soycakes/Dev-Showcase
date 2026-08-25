@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:icons": "node -e \"const si=require('simple-icons');const src=require('fs').readFileSync('src/data/icons.ts','utf8');const used=[...src.matchAll(/si[A-Z][a-z0-9]+/g)].map(m=>m[0]);const missing=used.filter(k=>!(k in si));missing.length?process.exit(console.error('MISSING:',missing)||1):console.log('icons OK')\""
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",

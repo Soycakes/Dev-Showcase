@@ -1,13 +1,17 @@
 import 'highlight.js/styles/github-dark.css'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useMemo } from 'react'
+import folderOpenUrl from '../assets/icon_folderOpen.svg'
+import folderClosedUrl from '../assets/icon_folderClosed.svg'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
+import hljs from 'highlight.js'
 import { WordRoller } from './WordRoller'
 import { TechBadge } from './TechIcon'
 import { MediaSlide, MediaThumb } from './MediaSlide'
 import { useLocale } from '../hooks/useLocale'
-import { STATUS_STYLE, STATUS_LABEL } from '../data/status'
+import { STATUS_LABEL } from '../data/status'
+import { getSnippetsForDir } from '../data/codeFiles'
 import type { MediaItem, Project } from '../data/types'
 
 const mdFiles = import.meta.glob('../content/projects/*.md', {
@@ -16,8 +20,10 @@ const mdFiles = import.meta.glob('../content/projects/*.md', {
   eager: true,
 }) as Record<string, string>
 
-function getMarkdown(id: string): string {
-  return mdFiles[`../content/projects/${id}.md`] ?? ''
+function getMarkdown(id: string, lang: string): string {
+  return mdFiles[`../content/projects/${id}.${lang}.md`]
+    ?? mdFiles[`../content/projects/${id}.en.md`]
+    ?? ''
 }
 
 
@@ -30,25 +36,48 @@ interface Props {
   onPrev: () => void
   onNext: () => void
   onBack: () => void
+  scrollToCode?: boolean
+  onScrollCodeDone?: () => void
 }
 
-export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext, onBack }: Props) {
+export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext, onBack, scrollToCode, onScrollCodeDone }: Props) {
   const { t, lang } = useLocale()
   const scrollRef = useRef<HTMLDivElement>(null)
+  const snippetsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     scrollRef.current?.scrollTo(0, 0)
   }, [project.id])
 
-  const markdown = getMarkdown(project.id)
+  function scrollToSnippets() {
+    if (!snippetsRef.current || !scrollRef.current) return
+    const containerRect = scrollRef.current.getBoundingClientRect()
+    const elemRect = snippetsRef.current.getBoundingClientRect()
+    scrollRef.current.scrollBy({ top: elemRect.top - containerRect.top - 80, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    if (!scrollToCode) return
+    const timer = setTimeout(() => {
+      scrollToSnippets()
+      onScrollCodeDone?.()
+    }, 250)
+    return () => clearTimeout(timer)
+  }, [scrollToCode])
+
+  const markdown = getMarkdown(project.id, lang)
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
   const hasStore = !!project.store
-  const hasSnippets = project.snippets.length > 0
+  const snippets = [
+    ...project.snippets,
+    ...(project.snippetsDir ? getSnippetsForDir(project.snippetsDir) : []),
+  ]
+  const hasSnippets = snippets.length > 0
 
   return (
     <div ref={scrollRef} className="h-full overflow-y-auto bg-white/50 dark:bg-neutral-950/50">
-      <div className="max-w-3xl mx-auto px-6 py-8">
+      <div className="px-6 py-8">
         <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
           <div>
             <div className="flex items-center gap-2">
@@ -65,7 +94,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
             <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{project.period}</p>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
-            <button onClick={onBack} className={`lg:hidden ${BTN}`}>[ <WordRoller text={lang === 'en' ? 'Overview' : '개요'} /> ]</button>
+            <button onClick={onBack} className={`lg:hidden ${BTN}`}>[ <WordRoller text={lang === 'en' ? 'Overview' : '목록'} /> ]</button>
             {prevProject && <button onClick={onPrev} className={BTN}>{`<< Prev`}</button>}
             {nextProject && <button onClick={onNext} className={BTN}>{`Next >>`}</button>}
           </div>
@@ -88,9 +117,12 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
             </a>
           )}
           {hasSnippets && (
-            <span className="font-mono text-xs border border-neutral-200 dark:border-neutral-700 px-3 py-1.5 rounded text-neutral-400">
-              [ {project.snippets.length} code files below ]
-            </span>
+            <button
+              onClick={scrollToSnippets}
+              className="font-mono text-xs border border-neutral-200 dark:border-neutral-700 px-3 py-1.5 rounded text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors"
+            >
+              [ Code Examples ]
+            </button>
           )}
         </div>
 
@@ -106,29 +138,147 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
           </ReactMarkdown>
         </div>
 
-        {hasSnippets && (
-          <div className="space-y-4 mb-8">
-            {project.snippets.map((snippet, i) => (
-              <div key={i} className="rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden">
-                <div className="flex items-center justify-between px-4 py-2 bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
-                  <span className="text-xs font-mono text-neutral-500">{snippet.filename}</span>
-                  <span className="text-xs text-neutral-400">{snippet.language}</span>
-                </div>
-                <p className="px-4 py-2 text-xs text-neutral-500 dark:text-neutral-400 border-b border-neutral-100 dark:border-neutral-800">
-                  <WordRoller text={t(snippet.description)} />
-                </p>
-                <pre className="overflow-x-auto px-4 py-4 text-xs leading-relaxed font-mono text-neutral-200 bg-neutral-950">
-                  <code>{snippet.code}</code>
-                </pre>
-              </div>
-            ))}
-          </div>
-        )}
+        {hasSnippets && <div ref={snippetsRef}><SnippetTree snippets={snippets} /></div>}
 
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map(s => <TechBadge key={s} name={s} />)}
         </div>
       </div>
+    </div>
+  )
+}
+
+type AnySnippet = { filename: string; relativePath?: string; language: string; code: string; description?: { en: string; ko: string } }
+
+type FileNode = { kind: 'file'; name: string; snippet: AnySnippet }
+type FolderNode = { kind: 'folder'; name: string; folderPath: string; children: TreeEntry[] }
+type TreeEntry = FileNode | FolderNode
+
+function insertIntoTree(entries: TreeEntry[], parts: string[], snippet: AnySnippet, parentPath: string): void {
+  if (parts.length === 1) {
+    entries.push({ kind: 'file', name: parts[0], snippet })
+    return
+  }
+  const folderName = parts[0]
+  const folderPath = parentPath ? `${parentPath}/${folderName}` : folderName
+  let folder = entries.find(e => e.kind === 'folder' && e.name === folderName) as FolderNode | undefined
+  if (!folder) {
+    folder = { kind: 'folder', name: folderName, folderPath, children: [] }
+    entries.push(folder)
+  }
+  insertIntoTree(folder.children, parts.slice(1), snippet, folderPath)
+}
+
+function buildTree(snippets: AnySnippet[]): TreeEntry[] {
+  const root: TreeEntry[] = []
+  for (const s of snippets) {
+    insertIntoTree(root, (s.relativePath ?? s.filename).split('/'), s, '')
+  }
+  return root
+}
+
+function firstFile(entries: TreeEntry[]): AnySnippet | null {
+  for (const e of entries) {
+    if (e.kind === 'file') return e.snippet
+    const f = firstFile(e.children)
+    if (f) return f
+  }
+  return null
+}
+
+function TreeNodes({ entries, collapsed, onToggle, activePath, onSelect, depth }: {
+  entries: TreeEntry[]
+  collapsed: Set<string>
+  onToggle: (path: string) => void
+  activePath: string
+  onSelect: (snippet: AnySnippet) => void
+  depth: number
+}) {
+  return (
+    <>
+      {entries.map(entry => {
+        if (entry.kind === 'file') {
+          const path = entry.snippet.relativePath ?? entry.snippet.filename
+          const isActive = path === activePath
+          return (
+            <button
+              key={entry.name}
+              onClick={() => onSelect(entry.snippet)}
+              style={{ paddingLeft: `${10 + depth * 16}px` }}
+              className={`flex items-center w-full text-left py-1 pr-3 text-xs font-mono transition-colors ${isActive ? 'bg-neutral-700 text-white' : 'text-neutral-200 hover:text-white'}`}
+            >
+              <span className="w-4 h-4 mr-1.5 shrink-0" />
+              {entry.name}
+            </button>
+          )
+        }
+        const isCollapsed = collapsed.has(entry.folderPath)
+        return (
+          <div key={entry.name}>
+            <button
+              onClick={() => onToggle(entry.folderPath)}
+              style={{ paddingLeft: `${10 + depth * 16}px` }}
+              className="flex items-center w-full text-left py-1 pr-3 text-xs font-mono text-neutral-300 hover:text-white transition-colors"
+            >
+              <img src={isCollapsed ? folderClosedUrl : folderOpenUrl} className="w-4 h-4 mr-1.5 shrink-0" alt="" />
+              {entry.name}
+            </button>
+            {!isCollapsed && (
+              <TreeNodes entries={entry.children} collapsed={collapsed} onToggle={onToggle} activePath={activePath} onSelect={onSelect} depth={depth + 1} />
+            )}
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
+function SnippetTree({ snippets }: { snippets: AnySnippet[] }) {
+  const { t } = useLocale()
+  const tree = useMemo(() => buildTree(snippets), [snippets])
+  const [current, setCurrent] = useState<AnySnippet>(() => firstFile(tree) ?? snippets[0])
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
+  const [copied, setCopied] = useState(false)
+
+  const activePath = current.relativePath ?? current.filename
+
+  function toggleFolder(path: string) {
+    setCollapsed(prev => {
+      const next = new Set(prev)
+      next.has(path) ? next.delete(path) : next.add(path)
+      return next
+    })
+  }
+
+  const highlighted = hljs.getLanguage(current.language)
+    ? hljs.highlight(current.code, { language: current.language }).value
+    : hljs.highlightAuto(current.code).value
+
+  function copy() {
+    navigator.clipboard.writeText(current.code)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1500)
+  }
+
+  return (
+    <div className="mb-8 rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 bg-neutral-950/20 py-1">
+        <TreeNodes entries={tree} collapsed={collapsed} onToggle={toggleFolder} activePath={activePath} onSelect={setCurrent} depth={0} />
+      </div>
+      {current.description && (
+        <p className="px-4 py-2 text-xs text-neutral-500 dark:text-neutral-400 border-b border-neutral-100 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900">
+          <WordRoller text={t(current.description)} />
+        </p>
+      )}
+      <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 bg-neutral-900 px-4 py-2">
+        <span className="text-xs font-mono text-neutral-400">{current.filename}</span>
+        <button onClick={copy} className="text-xs font-mono text-neutral-400 hover:text-white transition-colors">
+          {copied ? 'Copied!' : 'Copy'}
+        </button>
+      </div>
+      <pre className="overflow-x-auto px-4 py-4 text-xs leading-relaxed font-mono bg-neutral-950">
+        <code className="hljs" dangerouslySetInnerHTML={{ __html: highlighted }} />
+      </pre>
     </div>
   )
 }

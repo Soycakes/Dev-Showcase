@@ -3,7 +3,7 @@ import { WordRoller } from './WordRoller'
 import { TechBadge } from './TechIcon'
 import { MediaSlide, MediaThumb } from './MediaSlide'
 import { useLocale } from '../hooks/useLocale'
-import { STATUS_STYLE, STATUS_LABEL } from '../data/status'
+import { STATUS_LABEL } from '../data/status'
 import type { MediaItem, Project } from '../data/types'
 
 function MediaCarousel({ items, eager }: { items: MediaItem[]; eager: boolean }) {
@@ -54,13 +54,13 @@ function MediaCarousel({ items, eager }: { items: MediaItem[]; eager: boolean })
 
 interface Props {
   project: Project
+  onCodeClick?: () => void
 }
 
-export function ProjectCard({ project }: Props) {
+export function ProjectCard({ project, onCodeClick }: Props) {
   const { t, lang } = useLocale()
   const cardRef = useRef<HTMLElement>(null)
   const [heroLoaded, setHeroLoaded] = useState(false)
-  const [codeOpen, setCodeOpen] = useState(false)
 
   useEffect(() => {
     const el = cardRef.current
@@ -73,10 +73,10 @@ export function ProjectCard({ project }: Props) {
     return () => obs.disconnect()
   }, [])
 
-  const hasSnippets = project.snippets.length > 0
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
   const hasStore = !!project.store
+  const hasSnippets = project.snippets.length > 0 || !!project.snippetsDir
 
   return (
     <article ref={cardRef} className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 overflow-hidden">
@@ -97,35 +97,12 @@ export function ProjectCard({ project }: Props) {
             <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{project.period}</p>
           </div>
 
-          <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
-            <WordRoller text={t(project.summary)} />
-          </p>
-
-          {project.bullets.length > 0 && (
-            <ul className="space-y-1.5">
-              {project.bullets.map((b, i) => (
-                <li key={i} className="flex gap-2 text-sm text-neutral-600 dark:text-neutral-400">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
-                  <WordRoller text={t(b)} />
-                </li>
-              ))}
-            </ul>
-          )}
-
           <div className="flex flex-wrap gap-1.5 mt-auto pt-1">
             {project.stack.map(s => <TechBadge key={s} name={s} />)}
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {hasSnippets && (
-              <button
-                onClick={e => { e.stopPropagation(); setCodeOpen(o => !o) }}
-                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300"
-              >
-                [ View Code ({project.snippets.length}) ]
-              </button>
-            )}
-            {!hasSnippets && hasRepo && (
+            {hasRepo && (
               <a href={project.repoUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
                 className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
                 [ Github ]
@@ -143,6 +120,12 @@ export function ProjectCard({ project }: Props) {
                 [ {project.store!.label} ]
               </a>
             )}
+            {hasSnippets && onCodeClick && (
+              <button onClick={e => { e.stopPropagation(); onCodeClick() }}
+                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                [ Code Examples ]
+              </button>
+            )}
           </div>
         </div>
 
@@ -151,28 +134,6 @@ export function ProjectCard({ project }: Props) {
         </div>
       </div>
 
-      {hasSnippets && (
-        <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${codeOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-          <div className="overflow-hidden">
-            <div className="border-t border-neutral-100 dark:border-neutral-800 space-y-3 p-6">
-              {project.snippets.map((snippet, i) => (
-                <div key={i} className="rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden">
-                  <div className="flex items-center justify-between px-4 py-2 bg-neutral-50 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
-                    <span className="text-xs font-mono text-neutral-500">{snippet.filename}</span>
-                    <span className="text-xs text-neutral-400">{snippet.language}</span>
-                  </div>
-                  <p className="px-4 py-2 text-xs text-neutral-500 dark:text-neutral-400 border-b border-neutral-100 dark:border-neutral-800">
-                    <WordRoller text={t(snippet.description)} />
-                  </p>
-                  <pre className="overflow-x-auto px-4 py-4 text-xs leading-relaxed font-mono text-neutral-200 bg-neutral-950">
-                    <code>{snippet.code}</code>
-                  </pre>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </article>
   )
 }

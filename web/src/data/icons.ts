@@ -1,14 +1,23 @@
 import {
-  siPython, siTypescript, siJavascript, siCplusplus, siSharp, siOpenjdk, siKotlin,
+  siPython, siTypescript, siJavascript, siCplusplus, siOpenjdk, siKotlin,
   siReact, siNextdotjs, siFastapi, siNodedotjs,
   siLangchain,
   siGooglegemini, siGooglesheets,
   siMysql, siSqlite, siElasticsearch, siSupabase,
-  siUnity, siUnrealengine, siSteamworks,
-  siVercel, siGitlab, siGithub, siGithubactions, siDocker, siPerforce, siYoutube,
-  siJetpackcompose,
+  siUnity, siUnrealengine, siSteam,
+  siVercel, siGitlab, siGithub, siDocker, siPerforce, siYoutube,
+  siJetpackcompose, siAndroid,
 } from 'simple-icons'
 import type { SimpleIcon } from 'simple-icons'
+import csharpUrl from '../assets/CSharp.svg'
+import javaUrl from '../assets/Java.svg'
+
+export const CUSTOM_ICONS: Record<string, string> = {
+  'C#': csharpUrl,
+  'LINQ': csharpUrl,
+  'ASP.NET Core MVC': csharpUrl,
+  'Java': javaUrl,
+}
 
 export const TECH_ICONS: Record<string, SimpleIcon> = {
   'Python': siPython,
@@ -16,9 +25,7 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'JavaScript': siJavascript,
   'C++': siCplusplus,
   'NDK / C++': siCplusplus,
-  'C#': siSharp,
-  'LINQ': siSharp,
-  'Java': siOpenjdk,
+  'WebSockets': siCplusplus,
   'Kotlin': siKotlin,
 
   'React': siReact,
@@ -38,19 +45,23 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
 
   'Unity': siUnity,
   'ScriptableObjects': siUnity,
+  'ECS / DOTS': siUnity,
+  'Netcode for Entities': siUnity,
+  'Burst Compiler': siUnity,
   'Unreal Engine 5': siUnrealengine,
   'Unreal Engine': siUnrealengine,
   'Blueprints': siUnrealengine,
-  'Steamworks': siSteamworks,
+  'Steamworks': siSteam,
 
   'Vercel': siVercel,
   'GitLab': siGitlab,
   'GitHub': siGithub,
-  'GitHub Actions': siGithubactions,
+  'GitHub Actions': siGithub,
   'Docker': siDocker,
   'Perforce': siPerforce,
   'YouTube': siYoutube,
 
   'Jetpack Compose': siJetpackcompose,
+  'Room': siAndroid,
   'AppScript': siGooglesheets,
 }

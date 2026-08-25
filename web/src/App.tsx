@@ -49,6 +49,7 @@ export default function App() {
   const { showTooltip, dismissTooltip } = useOnboardingDemo()
   const [mode, setMode] = useState<'scroll' | 'quest'>('scroll')
   const [activeId, setActiveId] = useState<string | null>(null)
+  const [scrollToCode, setScrollToCode] = useState(false)
 
   useEffect(() => {
     const id = new URLSearchParams(window.location.search).get('project')
@@ -65,6 +66,12 @@ export default function App() {
   function enterQuest(id: string) {
     setActiveId(id)
     setMode('quest')
+  }
+
+  function enterQuestAtCode(id: string) {
+    setActiveId(id)
+    setMode('quest')
+    setScrollToCode(true)
   }
 
   function exitQuest() {
@@ -110,7 +117,7 @@ export default function App() {
                 <section className="space-y-4" aria-label="Projects">
                   {filtered.map(p => (
                     <div key={p.id} className="cursor-pointer" onClick={() => enterQuest(p.id)}>
-                      <ProjectCard project={p} />
+                      <ProjectCard project={p} onCodeClick={() => enterQuestAtCode(p.id)} />
                     </div>
                   ))}
                 </section>
@@ -119,13 +126,14 @@ export default function App() {
           ) : (
             <motion.div
               key="quest"
-              className="flex flex-1 overflow-hidden pl-[clamp(0px,calc(100vw_-_1260px),160px)]"
+              className="flex flex-1 overflow-hidden justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="hidden lg:flex lg:flex-col w-[360px] shrink-0 h-full">
+              <div className="flex w-full max-w-[1280px] h-full overflow-hidden">
+              <div className="hidden lg:flex lg:flex-col w-[320px] shrink-0 h-full">
                 <QuestRail
                   projects={filtered}
                   activeId={activeId}
@@ -153,10 +161,13 @@ export default function App() {
                         onPrev={() => prevProject && setActiveId(prevProject.id)}
                         onNext={() => nextProject && setActiveId(nextProject.id)}
                         onBack={exitQuest}
+                        scrollToCode={scrollToCode}
+                        onScrollCodeDone={() => setScrollToCode(false)}
                       />
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
               </div>
             </motion.div>
           )}

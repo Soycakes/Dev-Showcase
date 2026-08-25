@@ -10,20 +10,21 @@ export function useOnboardingDemo() {
     const initial: Lang = (localStorage.getItem('lang') as Lang) || 'en'
     const opposite: Lang = initial === 'en' ? 'ko' : 'en'
 
+    let t2: ReturnType<typeof setTimeout>
+    let t3: ReturnType<typeof setTimeout>
+
     const t1 = setTimeout(() => {
       setLang(opposite)
-      const t2 = setTimeout(() => {
+      t2 = setTimeout(() => {
         setLang(initial)
-        const t3 = setTimeout(() => {
+        t3 = setTimeout(() => {
           setShowTooltip(true)
           setTimeout(() => setShowTooltip(false), 5000)
         }, 400)
-        return () => clearTimeout(t3)
       }, 1200)
-      return () => clearTimeout(t2)
     }, 1000)
 
-    return () => clearTimeout(t1)
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   function dismissTooltip() { setShowTooltip(false) }

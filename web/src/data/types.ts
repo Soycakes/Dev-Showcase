@@ -21,8 +21,7 @@ export type MediaItem =
 export interface CodeSnippet {
   filename: string
   language: string
-  description: L10n
-  repoPath?: string
+  description?: L10n
   code: string
 }
 
@@ -34,12 +33,11 @@ export interface Project {
   period: string
   categories: Category[]
   stack: string[]
-  summary: L10n
-  bullets: L10n[]
   media: MediaItem[]
   snippets: CodeSnippet[]
   repoUrl?: string
   liveUrl?: string
   store?: { url: string; label: string }
+  snippetsDir?: string
   status: 'shipped' | 'wip' | 'archived'
 }

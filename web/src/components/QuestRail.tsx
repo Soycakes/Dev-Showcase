@@ -56,7 +56,7 @@ interface Props {
   onBack: () => void
 }
 
-const OVERVIEW: { en: string; ko: string } = { en: 'Overview', ko: '개요' }
+const OVERVIEW: { en: string; ko: string } = { en: 'Overview', ko: '목록' }
 
 export function QuestRail({ projects, activeId, filterActive, onFilterChange, onSelect, onBack }: Props) {
   const { lang } = useLocale()
@@ -74,7 +74,7 @@ export function QuestRail({ projects, activeId, filterActive, onFilterChange, on
         </button>
       </div>
       <FilterBar active={filterActive} onChange={onFilterChange} compact />
-      <div className="flex-1 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-700">
+      <div className="flex-1 overflow-y-auto">
         {projects.map(p => (
           <RailItem key={p.id} project={p} isActive={p.id === activeId} onClick={() => onSelect(p.id)} />
         ))}
