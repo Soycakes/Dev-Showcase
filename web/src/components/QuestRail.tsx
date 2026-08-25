@@ -18,9 +18,9 @@ function RailItem({ project, isActive, onClick }: RailItemProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left px-4 py-3 border-b border-neutral-100 dark:border-neutral-800 transition-colors border-l-2
+      className={`w-full text-left px-4 py-3 border-b border-neutral-100 dark:border-neutral-800 transition-colors border-l-4
         ${isActive
-          ? 'border-l-neutral-900 dark:border-l-white bg-neutral-50 dark:bg-neutral-900'
+          ? 'border-l-amber-400 bg-neutral-100 dark:bg-neutral-800'
           : 'border-l-transparent hover:bg-neutral-50 dark:hover:bg-neutral-900/50'
         }`}
     >

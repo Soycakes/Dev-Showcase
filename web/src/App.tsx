@@ -132,7 +132,7 @@ export default function App() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex w-full max-w-[1280px] h-full overflow-hidden">
+              <div className="flex w-full max-w-[1280px] h-full overflow-hidden gap-4">
               <div className="hidden lg:flex lg:flex-col w-[320px] shrink-0 h-full">
                 <QuestRail
                   projects={filtered}

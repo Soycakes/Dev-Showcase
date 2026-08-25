@@ -104,25 +104,25 @@ export function ProjectCard({ project, onCodeClick }: Props) {
           <div className="flex flex-wrap gap-2">
             {hasRepo && (
               <a href={project.repoUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
-                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                className="font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity">
                 [ Github ]
               </a>
             )}
             {hasLive && (
               <a href={project.liveUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
-                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                className="font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity">
                 [ Live Demo ]
               </a>
             )}
             {hasStore && (
               <a href={project.store!.url} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
-                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                className="font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity">
                 [ {project.store!.label} ]
               </a>
             )}
             {hasSnippets && onCodeClick && (
               <button onClick={e => { e.stopPropagation(); onCodeClick() }}
-                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                className="font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity">
                 [ Code Examples ]
               </button>
             )}

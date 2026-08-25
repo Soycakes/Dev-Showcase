@@ -27,7 +27,8 @@ function getMarkdown(id: string, lang: string): string {
 }
 
 
-const BTN = 'font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300'
+const BTN_PRIMARY = 'font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity'
+const BTN_NAV = 'font-mono text-xs border border-neutral-300 dark:border-neutral-700 px-3 py-1.5 rounded-md text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors'
 
 interface Props {
   project: Project
@@ -94,33 +95,30 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
             <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{project.period}</p>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
-            <button onClick={onBack} className={`lg:hidden ${BTN}`}>[ <WordRoller text={lang === 'en' ? 'Overview' : '목록'} /> ]</button>
-            {prevProject && <button onClick={onPrev} className={BTN}>{`<< Prev`}</button>}
-            {nextProject && <button onClick={onNext} className={BTN}>{`Next >>`}</button>}
+            <button onClick={onBack} className={`lg:hidden ${BTN_NAV}`}>[ <WordRoller text={lang === 'en' ? 'Overview' : '목록'} /> ]</button>
+            {prevProject && <button onClick={onPrev} className={BTN_NAV}>{`<< Prev`}</button>}
+            {nextProject && <button onClick={onNext} className={BTN_NAV}>{`Next >>`}</button>}
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-8">
           {hasLive && (
-            <a href={project.liveUrl} target="_blank" rel="noreferrer" className={BTN}>
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
               [ Live Demo ]
             </a>
           )}
           {hasStore && (
-            <a href={project.store!.url} target="_blank" rel="noreferrer" className={BTN}>
+            <a href={project.store!.url} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
               [ {project.store!.label} ]
             </a>
           )}
           {hasRepo && (
-            <a href={project.repoUrl} target="_blank" rel="noreferrer" className={BTN}>
+            <a href={project.repoUrl} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
               [ Github ]
             </a>
           )}
           {hasSnippets && (
-            <button
-              onClick={scrollToSnippets}
-              className="font-mono text-xs border border-neutral-200 dark:border-neutral-700 px-3 py-1.5 rounded text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors"
-            >
+            <button onClick={scrollToSnippets} className={BTN_PRIMARY}>
               [ Code Examples ]
             </button>
           )}
@@ -235,7 +233,9 @@ function TreeNodes({ entries, collapsed, onToggle, activePath, onSelect, depth }
 
 function SnippetTree({ snippets }: { snippets: AnySnippet[] }) {
   const { t } = useLocale()
-  const tree = useMemo(() => buildTree(snippets), [snippets])
+  const tree = useMemo<TreeEntry[]>(() => [
+    { kind: 'folder', name: 'Code Examples', folderPath: '__root__', children: buildTree(snippets) }
+  ], [snippets])
   const [current, setCurrent] = useState<AnySnippet>(() => firstFile(tree) ?? snippets[0])
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set())
   const [copied, setCopied] = useState(false)
