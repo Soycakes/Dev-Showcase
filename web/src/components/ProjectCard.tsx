@@ -76,21 +76,25 @@ export function ProjectCard({ project }: Props) {
   const hasSnippets = project.snippets.length > 0
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
+  const hasStore = !!project.store
 
   return (
-    <article ref={cardRef} className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 overflow-hidden">
+    <article ref={cardRef} className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <div className="flex flex-col gap-3 p-6 lg:w-[55%]">
           <div>
-            <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-2 ${STATUS_STYLE[project.status]}`}>
-              {STATUS_LABEL[lang][project.status]}
-            </span>
-            <h2 className="text-2xl font-bold text-neutral-900 dark:text-white leading-tight">
-              <WordRoller text={t(project.title)} single />
-            </h2>
+            <div className="flex items-center justify-between gap-2">
+              <h2 className="text-2xl font-bold text-neutral-900 dark:text-white leading-tight">
+                <WordRoller text={t(project.title)} />
+              </h2>
+              <span className="text-xs text-neutral-400 dark:text-neutral-500 shrink-0">
+                <WordRoller text={STATUS_LABEL[lang][project.status]} />
+              </span>
+            </div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">
-              <WordRoller text={t(project.subtitle)} single /> - {project.period}
+              <WordRoller text={t(project.role)} />, <WordRoller text={t(project.subtitle)} />
             </p>
+            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{project.period}</p>
           </div>
 
           <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
@@ -124,7 +128,7 @@ export function ProjectCard({ project }: Props) {
             {!hasSnippets && hasRepo && (
               <a href={project.repoUrl} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
                 className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
-                [ Repo ]
+                [ Github ]
               </a>
             )}
             {hasLive && (
@@ -133,10 +137,16 @@ export function ProjectCard({ project }: Props) {
                 [ Live Demo ]
               </a>
             )}
+            {hasStore && (
+              <a href={project.store!.url} target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}
+                className="font-mono text-xs border border-neutral-400 dark:border-neutral-600 px-3 py-1.5 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-700 dark:text-neutral-300">
+                [ {project.store!.label} ]
+              </a>
+            )}
           </div>
         </div>
 
-        <div className="p-4 lg:w-[45%] lg:border-l border-t lg:border-t-0 border-neutral-100 dark:border-neutral-800">
+        <div className="p-4 lg:w-[45%]">
           <MediaCarousel items={project.media} eager={heroLoaded} />
         </div>
       </div>

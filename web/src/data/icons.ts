@@ -5,7 +5,7 @@ import {
   siGooglegemini, siGooglesheets,
   siMysql, siSqlite, siElasticsearch, siSupabase,
   siUnity, siUnrealengine, siSteamworks,
-  siVercel, siGitlab, siGithub, siGithubactions, siDocker, siPerforce,
+  siVercel, siGitlab, siGithub, siGithubactions, siDocker, siPerforce, siYoutube,
   siJetpackcompose,
 } from 'simple-icons'
 import type { SimpleIcon } from 'simple-icons'
@@ -49,6 +49,7 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'GitHub Actions': siGithubactions,
   'Docker': siDocker,
   'Perforce': siPerforce,
+  'YouTube': siYoutube,
 
   'Jetpack Compose': siJetpackcompose,
   'AppScript': siGooglesheets,

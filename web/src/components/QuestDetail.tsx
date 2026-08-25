@@ -43,6 +43,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
   const markdown = getMarkdown(project.id)
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
+  const hasStore = !!project.store
   const hasSnippets = project.snippets.length > 0
 
   return (
@@ -50,18 +51,21 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
       <div className="max-w-3xl mx-auto px-6 py-8">
         <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
           <div>
-            <span className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full mb-2 ${STATUS_STYLE[project.status]}`}>
-              {STATUS_LABEL[lang][project.status]}
-            </span>
-            <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">
-              <WordRoller text={t(project.title)} single />
-            </h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">
+                <WordRoller text={t(project.title)} />
+              </h1>
+              <span className="text-xs text-neutral-400 dark:text-neutral-500 shrink-0">
+                <WordRoller text={STATUS_LABEL[lang][project.status]} />
+              </span>
+            </div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
-              <WordRoller text={t(project.subtitle)} single /> - {project.period}
+              <WordRoller text={t(project.role)} />, <WordRoller text={t(project.subtitle)} />
             </p>
+            <p className="text-xs text-neutral-400 dark:text-neutral-500 mt-0.5">{project.period}</p>
           </div>
           <div className="flex items-center gap-2 flex-wrap">
-            <button onClick={onBack} className={`lg:hidden ${BTN}`}>[ Overview ]</button>
+            <button onClick={onBack} className={`lg:hidden ${BTN}`}>[ <WordRoller text={lang === 'en' ? 'Overview' : '개요'} /> ]</button>
             {prevProject && <button onClick={onPrev} className={BTN}>{`<< Prev`}</button>}
             {nextProject && <button onClick={onNext} className={BTN}>{`Next >>`}</button>}
           </div>
@@ -73,9 +77,14 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
               [ Live Demo ]
             </a>
           )}
+          {hasStore && (
+            <a href={project.store!.url} target="_blank" rel="noreferrer" className={BTN}>
+              [ {project.store!.label} ]
+            </a>
+          )}
           {hasRepo && (
             <a href={project.repoUrl} target="_blank" rel="noreferrer" className={BTN}>
-              [ Repo ]
+              [ Github ]
             </a>
           )}
           {hasSnippets && (

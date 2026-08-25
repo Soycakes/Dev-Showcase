@@ -3,7 +3,8 @@ import { useLocale } from '../hooks/useLocale'
 import { WordRoller } from './WordRoller'
 
 const NAV_LINKS = [
-  { href: '#contact', en: 'Contact', ko: '연락하기' },
+  { href: 'https://github.com/Soycakes/Dev-Showcase', en: 'Github', ko: 'Github', external: true },
+  { href: '#contact', en: 'Contact', ko: '이메일' },
 ]
 
 interface NavbarProps {
@@ -29,7 +30,7 @@ export function Navbar({ showTooltip, onDismissTooltip, onLogoClick }: NavbarPro
           <ul className="hidden items-center gap-5 sm:flex">
             {NAV_LINKS.map(link => (
               <li key={link.href}>
-                <a href={link.href} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
+                <a href={link.href} {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
                   <WordRoller text={lang === 'en' ? link.en : link.ko} single />
                 </a>
               </li>

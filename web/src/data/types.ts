@@ -29,15 +29,17 @@ export interface CodeSnippet {
 export interface Project {
   id: string
   title: L10n
+  role: L10n
   subtitle: L10n
-  period: string            // dates don't need translation
+  period: string
   categories: Category[]
-  stack: string[]           // tech names don't need translation
+  stack: string[]
   summary: L10n
   bullets: L10n[]
   media: MediaItem[]
   snippets: CodeSnippet[]
   repoUrl?: string
   liveUrl?: string
+  store?: { url: string; label: string }
   status: 'shipped' | 'wip' | 'archived'
 }

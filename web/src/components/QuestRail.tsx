@@ -26,13 +26,13 @@ function RailItem({ project, isActive, onClick }: RailItemProps) {
     >
       <div className="flex gap-3 items-start">
         <div className="flex-1 min-w-0">
-          <p className="text-xs text-neutral-400 truncate mb-1">{project.period}</p>
           <p className={`text-sm font-semibold truncate ${isActive ? 'text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'}`}>
-            <WordRoller text={t(project.title)} single />
+            <WordRoller text={t(project.title)} />
           </p>
           <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate mt-0.5">
-            <WordRoller text={t(project.subtitle)} single />
+            <WordRoller text={t(project.role)} />, <WordRoller text={t(project.subtitle)} />
           </p>
+          <p className="text-xs text-neutral-400 dark:text-neutral-500 truncate mt-0.5">{project.period}</p>
           <div className="flex flex-wrap gap-1 mt-2">
             {project.stack.map(s => <TechBadge key={s} name={s} />)}
           </div>
@@ -56,7 +56,10 @@ interface Props {
   onBack: () => void
 }
 
+const OVERVIEW: { en: string; ko: string } = { en: 'Overview', ko: '개요' }
+
 export function QuestRail({ projects, activeId, filterActive, onFilterChange, onSelect, onBack }: Props) {
+  const { lang } = useLocale()
   return (
     <div className="flex flex-col h-full border-r border-neutral-200/60 dark:border-neutral-800/60 bg-white/50 dark:bg-neutral-950/50">
       <div className="flex items-center gap-2 px-4 py-3 border-b border-neutral-200 dark:border-neutral-800 shrink-0">
@@ -67,7 +70,7 @@ export function QuestRail({ projects, activeId, filterActive, onFilterChange, on
           <svg className="h-4 w-4" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M7 2L3 6l4 4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Overview
+          <WordRoller text={OVERVIEW[lang]} />
         </button>
       </div>
       <FilterBar active={filterActive} onChange={onFilterChange} compact />

@@ -1,14 +1,23 @@
-import type { Project } from './types'
+import type { L10n, Project } from './types'
 
-const WIP: { en: string; ko: string } = { en: 'WIP, Placeholder', ko: 'WIP, Placeholder' }
+const WIP: L10n = { en: 'WIP, Placeholder', ko: 'WIP, Placeholder' }
+
+export const CATEGORIES = {
+  'ai-agents': { en: 'AI & Agents', ko: 'AI & 에이전트' },
+  'game-dev': { en: 'Game Dev', ko: '게임 개발' },
+  'fullstack': { en: 'Full Stack', ko: '풀스택' },
+  'systems': { en: 'Systems', ko: '시스템' },
+  'tools': { en: 'Tools & DevOps', ko: '툴 & DevOps' },
+} as const
 
 export const projects: Project[] = [
   {
     id: 'mapdev',
     title: { en: 'Multi Agent Planning Harness', ko: '멀티 에이전트 계획 하네스' },
+    role: { en: 'Full Stack & AI Engineer', ko: '풀스택 & AI 개발' },
     subtitle: { en: 'MAPDev', ko: 'MAPDev' },
     period: 'Aug 2026 - Present',
-    categories: ['ai-agents'],
+    categories: ['ai-agents', 'fullstack'],
     stack: ['LangGraph', 'Python', 'FastAPI', 'Next.js', 'TypeScript', 'Gemini API', 'SQLite'],
     status: 'wip',
     summary: WIP,
@@ -17,8 +26,9 @@ export const projects: Project[] = [
     snippets: [],
   },
   {
-    id: 'soylangraph',
+    id: 'soylanggraph',
     title: { en: 'Multi Agent Code Pipeline', ko: '멀티 에이전트 코드 파이프라인' },
+    role: { en: 'AI Systems Engineer', ko: 'AI 시스템 개발' },
     subtitle: { en: 'SoyLangGraph', ko: 'SoyLangGraph' },
     period: 'Jul 2026 - Aug 2026',
     categories: ['ai-agents'],
@@ -32,6 +42,7 @@ export const projects: Project[] = [
   {
     id: 'blobday',
     title: { en: 'Global Scheduler Web App', ko: '글로벌 스케줄러 웹 앱' },
+    role: { en: 'Full Stack Engineer', ko: '풀스택 개발' },
     subtitle: { en: 'blob.day', ko: 'blob.day' },
     period: 'Mar 2026 - Present',
     categories: ['fullstack'],
@@ -46,6 +57,7 @@ export const projects: Project[] = [
   {
     id: 'slimecake',
     title: { en: 'Unity Precise Puzzle Platformer', ko: 'Unity 정밀 퍼즐 플랫포머' },
+    role: { en: 'Gameplay & Tools Developer', ko: '게임 클라이언트 & 툴 개발' },
     subtitle: { en: 'Slime Cake', ko: '슬라임 케이크' },
     period: 'Apr 2026 - Present',
     categories: ['game-dev', 'tools'],
@@ -55,12 +67,13 @@ export const projects: Project[] = [
     bullets: [],
     media: [],
     snippets: [],
-    liveUrl: 'https://soycakes.itch.io/slime-cake',
+    store: { url: 'https://soycakes.itch.io/slime-cake', label: 'itch.io' },
   },
   {
     id: 'boss-fights',
-    title: { en: 'Just The Boss Fights', ko: '저스트 더 보스 파이츠' },
-    subtitle: { en: 'Unity 2.5D Boss Encounter Game', ko: 'Unity 2.5D 보스 인카운터 게임' },
+    title: { en: 'Just The Boss Fights', ko: 'Just The Boss Fights' },
+    role: { en: 'Lead Programmer (30+ Team)', ko: '리드 프로그래머 (30인 팀)' },
+    subtitle: { en: 'Unity 2.5D Boss Rush', ko: 'Unity 2.5D 보스 러시 게임' },
     period: 'Jun 2024 - Dec 2025',
     categories: ['game-dev'],
     stack: ['Unity', 'C#', 'Perforce', 'Steamworks'],
@@ -69,11 +82,13 @@ export const projects: Project[] = [
     bullets: [],
     media: [],
     snippets: [],
+    store: { url: 'https://store.steampowered.com/app/3572440/Just_the_Boss_Fights/', label: 'Steam' },
   },
   {
     id: 'mmo-emulator',
-    title: { en: 'MMO-RPG Emulator', ko: 'MMO-RPG 에뮬레이터' },
-    subtitle: { en: 'High-Throughput Game Server', ko: '고처리량 게임 서버' },
+    title: { en: 'MMORPG Emulator', ko: 'MMORPG 에뮬레이터' },
+    role: { en: 'Backend Engineer (Team of 4)', ko: '서버 엔지니어 (4인 팀)' },
+    subtitle: { en: 'MMO Server & Client', ko: 'MMO 서버 & 클라이언트' },
     period: 'Mar 2024 - Present',
     categories: ['systems', 'fullstack'],
     stack: ['Java', 'JavaScript', 'MySQL', 'ElasticSearch', 'GitLab', 'AppScript'],
@@ -86,8 +101,9 @@ export const projects: Project[] = [
   {
     id: 'terraria-picker',
     title: { en: 'React Terraria Data Picker', ko: 'React 테라리아 데이터 피커' },
+    role: { en: 'Frontend Developer', ko: '프론트엔드 개발' },
     subtitle: { en: 'Web App + CSV Pipeline', ko: '웹 앱 + CSV 파이프라인' },
-    period: '2024',
+    period: 'Aug 2026',
     categories: ['fullstack', 'tools'],
     stack: ['React', 'TypeScript', 'CSV'],
     status: 'shipped',
@@ -95,11 +111,13 @@ export const projects: Project[] = [
     bullets: [],
     media: [],
     snippets: [],
-    repoUrl: 'https://soycakes.github.io/TerrariaWeapons',
+    liveUrl: 'https://soycakes.github.io/TerrariaWeapons/',
+    repoUrl: 'https://github.com/Soycakes/TerrariaWeapons',
   },
   {
     id: 'dodgeball',
-    title: { en: 'Interdimensional Dodgeball', ko: '인터디멘셔널 닷지볼' },
+    title: { en: 'Interdimensional Dodgeball', ko: 'Interdimensional Dodgeball' },
+    role: { en: 'Gameplay Engineer (Team of 3)', ko: '게임플레이 엔지니어 (3인 팀)' },
     subtitle: { en: 'Multiplayer Arena FPS', ko: '멀티플레이어 아레나 FPS' },
     period: 'May 2023 - Oct 2023',
     categories: ['game-dev'],
@@ -113,10 +131,11 @@ export const projects: Project[] = [
   {
     id: 'android-drawing',
     title: { en: 'Android Drawing App', ko: '안드로이드 드로잉 앱' },
+    role: { en: 'Systems Developer (Academic)', ko: '시스템 개발 (학부)' },
     subtitle: { en: 'Kotlin + Native C++', ko: 'Kotlin + 네이티브 C++' },
     period: 'University',
     categories: ['systems'],
-    stack: ['Kotlin', 'Jetpack Compose', 'NDK / C++'],
+    stack: ['Kotlin', 'Jetpack Compose', 'NDK / C++', 'Room'],
     status: 'archived',
     summary: WIP,
     bullets: [],
@@ -126,6 +145,7 @@ export const projects: Project[] = [
   {
     id: 'snake-multiplayer',
     title: { en: 'Multiplayer Snake', ko: '멀티플레이어 스네이크' },
+    role: { en: 'Network Programmer (Academic)', ko: '네트워크 프로그래밍 (학부)' },
     subtitle: { en: 'C++ + WebSockets', ko: 'C++ + 웹소켓' },
     period: 'University',
     categories: ['systems'],
@@ -139,7 +159,8 @@ export const projects: Project[] = [
   {
     id: 'lms-db',
     title: { en: 'Learning Management System DB Backend', ko: '학습 관리 시스템 DB 백엔드' },
-    subtitle: { en: 'Backend DB Project', ko: '백엔드 DB 프로젝트' },
+    role: { en: 'Database Developer (Academic)', ko: 'DB 시스템 개발 (학부)' },
+    subtitle: { en: 'Academic DB Project', ko: '학부 DB 프로젝트' },
     period: 'University',
     categories: ['fullstack', 'systems'],
     stack: ['C#', 'LINQ', 'SQL'],
@@ -150,11 +171,3 @@ export const projects: Project[] = [
     snippets: [],
   },
 ]
-
-export const CATEGORIES = {
-  'ai-agents': { en: 'AI & Agents', ko: 'AI & 에이전트' },
-  'game-dev': { en: 'Game Dev', ko: '게임 개발' },
-  'fullstack': { en: 'Full-Stack', ko: '풀스택' },
-  'systems': { en: 'Systems', ko: '시스템' },
-  'tools': { en: 'Tools & DevOps', ko: '툴 & DevOps' },
-} as const

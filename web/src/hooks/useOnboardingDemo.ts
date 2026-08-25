@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react'
+import { useLocale } from './useLocale'
 import type { Lang } from '../data/types'
 
 export function useOnboardingDemo() {
-  const initial: Lang = (localStorage.getItem('lang') as Lang) || 'en'
-  const opposite: Lang = initial === 'en' ? 'ko' : 'en'
-  const [demoLang, setDemoLang] = useState<Lang>(initial)
-  const [done, setDone] = useState(false)
+  const { lang, setLang } = useLocale()
   const [showTooltip, setShowTooltip] = useState(false)
 
   useEffect(() => {
+    const initial: Lang = (localStorage.getItem('lang') as Lang) || 'en'
+    const opposite: Lang = initial === 'en' ? 'ko' : 'en'
+
     const t1 = setTimeout(() => {
-      setDemoLang(opposite)
+      setLang(opposite)
       const t2 = setTimeout(() => {
-        setDemoLang(initial)
+        setLang(initial)
         const t3 = setTimeout(() => {
-          setDone(true)
           setShowTooltip(true)
           setTimeout(() => setShowTooltip(false), 5000)
         }, 400)
@@ -24,9 +24,9 @@ export function useOnboardingDemo() {
     }, 1000)
 
     return () => clearTimeout(t1)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   function dismissTooltip() { setShowTooltip(false) }
 
-  return { demoLang, done, showTooltip, dismissTooltip }
+  return { showTooltip, dismissTooltip }
 }

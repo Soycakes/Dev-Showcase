@@ -47,7 +47,7 @@ export const CFG = {
   twinkleSwing: 0.45,
   starSpeed: [0.3, 1.2] as [number, number],
 
-  starOpacity: [0.12, 0.38] as [number, number],
+  starOpacity: [0.32, 0.68] as [number, number],
   bigStarOpacity: [0.25, 0.50] as [number, number],
   planetOpacity: [0.10, 0.20] as [number, number],
 
@@ -60,10 +60,10 @@ export const CFG = {
 
   rocketScale: 0.5,
   rocketLerp: 0.005,
-  rocketMaxTiltDeg: 80,
+  rocketMaxTiltDeg: 60,
   rocketTiltDistance: 150, // px of horizontal offset for max tilt
-  rocketOpacity: 0.4,
-  flameOpacity: 0.2,
+  rocketOpacity: 0.6,
+  flameOpacity: 0.4,
   flameStepMs: 500,
 
   // must match body background in index.css

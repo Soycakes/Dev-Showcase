@@ -55,8 +55,7 @@ function Slot({ word }: SlotProps) {
   )
 }
 
-const N_BATCHES = 5
-const BATCH_INTERVAL_MS = 160
+const SHUFFLE_WINDOW_MS = 800
 
 export interface WordRollerProps {
   text: string
@@ -87,22 +86,17 @@ export function WordRoller({ text, className = '', single = false }: WordRollerP
       .map((w, i) => (w !== slotWordsRef.current[i] ? i : -1))
       .filter(i => i !== -1)
 
-    const shuffled = [...changed].sort(() => Math.random() - 0.5)
-    const batches: number[][] = Array.from({ length: N_BATCHES }, () => [])
-    shuffled.forEach((idx, i) => batches[i % N_BATCHES].push(idx))
-
     slotWordsRef.current = targets
 
-    batches.forEach((batch, bi) => {
-      if (batch.length === 0) return
+    changed.forEach(idx => {
       const t = setTimeout(() => {
         setSlotWords(prev => {
           const next = [...prev]
           while (next.length < targets.length) next.push('')
-          batch.forEach(i => { next[i] = targets[i] })
+          next[idx] = targets[idx]
           return next
         })
-      }, bi * BATCH_INTERVAL_MS)
+      }, Math.random() * SHUFFLE_WINDOW_MS)
       timers.current.push(t)
     })
   }, [text]) // eslint-disable-line react-hooks/exhaustive-deps

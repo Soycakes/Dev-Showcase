@@ -32,7 +32,7 @@ export function FilterBar({ active, onChange, compact }: Props) {
                 : 'border border-neutral-200 text-neutral-600 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500'
               }`}
           >
-            <WordRoller text={t(label)} single />
+            <WordRoller text={t(label)} />
           </button>
         ))}
     </nav>

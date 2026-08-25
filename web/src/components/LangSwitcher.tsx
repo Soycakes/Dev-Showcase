@@ -32,7 +32,7 @@ export function LangSwitcher({ showTooltip, onDismissTooltip }: Props) {
   return (
     <div ref={ref} className="relative">
       <button
-        onClick={() => setOpen(o => !o)}
+        onClick={() => { setOpen(o => !o); onDismissTooltip() }}
         className="flex items-center gap-2 border border-neutral-200 bg-white px-3 py-1.5 text-sm font-medium text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-950 dark:text-neutral-200 dark:hover:bg-neutral-900"
         aria-haspopup="listbox"
         aria-expanded={open}

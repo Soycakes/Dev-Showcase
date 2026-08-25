@@ -11,32 +11,32 @@ import { FilterBar } from './components/FilterBar'
 import { QuestRail } from './components/QuestRail'
 import { QuestDetail } from './components/QuestDetail'
 import { WordRoller } from './components/WordRoller'
-import type { Lang } from './data/types'
-
+import { TechIcon } from './components/TechIcon'
 const HERO_TEXT = {
   name: { en: 'Hyung Min Park', ko: '박형민' },
   tagline: { en: 'Software Engineer / Game Dev / AI Systems', ko: '소프트웨어 엔지니어 / 게임 개발 / AI 시스템' },
 }
 
-function Hero({ demoLang, demoDone }: { demoLang: Lang; demoDone: boolean }) {
+function Hero() {
   const { lang } = useLocale()
-  const activeLang = demoDone ? lang : demoLang
 
   return (
     <section className="mx-auto max-w-5xl px-6 py-20">
       <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
-        <WordRoller text={HERO_TEXT.name[activeLang]} single />
+        <WordRoller text={HERO_TEXT.name[lang]} single />
       </h1>
-      <p className="mt-3 text-lg text-neutral-500 dark:text-neutral-400">
-        <WordRoller text={HERO_TEXT.tagline[activeLang]} />
+      <p className="mt-3 text-lg text-neutral-400 dark:text-neutral-300">
+        <WordRoller text={HERO_TEXT.tagline[lang]} />
       </p>
       <div className="mt-5 flex gap-4">
         <a href="https://github.com/Soycakes" target="_blank" rel="noreferrer"
-          className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:hover:text-white">
+          className="flex items-center gap-1.5 text-sm text-neutral-400 transition hover:text-neutral-900 dark:hover:text-white">
+          <TechIcon name="GitHub" size={16} color="brand" />
           GitHub
         </a>
         <a href="https://youtube.com/@Soycake" target="_blank" rel="noreferrer"
-          className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:hover:text-white">
+          className="flex items-center gap-1.5 text-sm text-neutral-400 transition hover:text-neutral-900 dark:hover:text-white">
+          <TechIcon name="YouTube" size={16} color="brand" />
           YouTube
         </a>
       </div>
@@ -46,7 +46,7 @@ function Hero({ demoLang, demoDone }: { demoLang: Lang; demoDone: boolean }) {
 
 export default function App() {
   const { active, setActive, filtered } = useFilter()
-  const { demoLang, done, showTooltip, dismissTooltip } = useOnboardingDemo()
+  const { showTooltip, dismissTooltip } = useOnboardingDemo()
   const [mode, setMode] = useState<'scroll' | 'quest'>('scroll')
   const [activeId, setActiveId] = useState<string | null>(null)
 
@@ -104,7 +104,7 @@ export default function App() {
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.2 }}
             >
-              <Hero demoLang={demoLang} demoDone={done} />
+              <Hero />
               <div id="projects" className="mx-auto max-w-5xl px-6 pb-24">
                 <FilterBar active={active} onChange={setActive} />
                 <section className="space-y-4" aria-label="Projects">
