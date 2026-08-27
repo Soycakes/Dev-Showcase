@@ -1,1 +1,5 @@
-WIP, Placeholder
+Unreal Engine의 Blueprint 기능을 활용해 신속한 게임플레이 Prototyping을 진행하고, 빠른 템포의 멀티플레이어 아레나 FPS 게임 개발.
+
+네트워크 플레이어 무브먼트, "로비에서 매치메이킹"으로 이어지는 사이클, 그리고 LAN 테스트 세션 동안 호스트와 클라이언트 간의 즉각적인 동기화를 위한 커스텀 Server RPC를 개발.
+
+Multicast Replication 상태를 활용하여 클라이언트 측 무브먼트 Desync를 30%로 감소시켰으며, 최대 8명의 동시 플레이어와 30개 이상의 피구 투사체에 대한 서버 측 연산을 최적화.

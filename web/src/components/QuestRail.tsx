@@ -2,7 +2,6 @@ import { useLocale } from '../hooks/useLocale'
 import { FilterBar } from './FilterBar'
 import { WordRoller } from './WordRoller'
 import { TechBadge } from './TechIcon'
-import { MediaThumb } from './MediaSlide'
 import type { Category, Project } from '../data/types'
 
 interface RailItemProps {
@@ -13,8 +12,6 @@ interface RailItemProps {
 
 function RailItem({ project, isActive, onClick }: RailItemProps) {
   const { t } = useLocale()
-  const thumb = project.media[0] ?? null
-
   return (
     <button
       onClick={onClick}
@@ -24,24 +21,15 @@ function RailItem({ project, isActive, onClick }: RailItemProps) {
           : 'border-l-transparent hover:bg-neutral-50 dark:hover:bg-neutral-900/50'
         }`}
     >
-      <div className="flex gap-3 items-start">
-        <div className="flex-1 min-w-0">
-          <p className={`text-sm font-semibold truncate ${isActive ? 'text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'}`}>
-            <WordRoller text={t(project.title)} />
-          </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate mt-0.5">
-            <WordRoller text={t(project.role)} />, <WordRoller text={t(project.subtitle)} />
-          </p>
-          <p className="text-xs text-neutral-400 dark:text-neutral-500 truncate mt-0.5">{project.period}</p>
-          <div className="flex flex-wrap gap-1 mt-2">
-            {project.stack.map(s => <TechBadge key={s} name={s} />)}
-          </div>
-        </div>
-        {thumb && (
-          <div className="h-16 w-20 shrink-0 rounded overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative">
-            <MediaThumb item={thumb} />
-          </div>
-        )}
+      <p className={`text-sm font-semibold truncate ${isActive ? 'text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'}`}>
+        <WordRoller text={t(project.title)} />
+      </p>
+      <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate mt-0.5">
+        <WordRoller text={t(project.role)} />, <WordRoller text={t(project.subtitle)} />
+      </p>
+      <p className="text-xs text-neutral-400 dark:text-neutral-500 truncate mt-0.5">{project.period}</p>
+      <div className="flex flex-wrap gap-1 mt-2">
+        {project.stack.map(s => <TechBadge key={s} name={s} />)}
       </div>
     </button>
   )

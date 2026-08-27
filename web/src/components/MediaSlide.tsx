@@ -2,7 +2,7 @@ import type { MediaItem } from '../data/types'
 
 export function MediaSlide({ item }: { item: MediaItem }) {
   if (item.kind === 'image' || item.kind === 'gif') {
-    return <img src={item.src} alt={item.alt} className="absolute inset-0 h-full w-full object-cover" />
+    return <img src={item.src} alt={item.alt} className="absolute inset-0 h-full w-full" style={{ objectFit: item.thumbFit ?? 'cover', objectPosition: item.thumbPosition ?? 'center' }} />
   }
   if (item.kind === 'youtube') {
     return (
@@ -24,7 +24,7 @@ export function MediaSlide({ item }: { item: MediaItem }) {
 
 export function MediaThumb({ item }: { item: MediaItem }) {
   if (item.kind === 'image' || item.kind === 'gif') {
-    return <img src={item.src} alt="" className="h-full w-full object-cover" />
+    return <img src={item.src} alt="" className="h-full w-full" style={{ objectFit: item.thumbFit ?? 'cover', objectPosition: item.thumbPosition ?? 'center' }} />
   }
   if (item.kind === 'youtube') {
     return <img src={`https://img.youtube.com/vi/${item.videoId}/default.jpg`} alt="" className="h-full w-full object-cover" />

@@ -11,7 +11,6 @@ interface Params {
 export function useQuestNavigation({ filtered, activeId, setActiveId, exitQuest }: Params) {
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') { exitQuest(); return }
       if (!activeId || filtered.length === 0) return
       const idx = filtered.findIndex(p => p.id === activeId)
       if (e.key === 'ArrowDown') {

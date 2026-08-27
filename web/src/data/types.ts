@@ -13,8 +13,8 @@ export interface L10n {
 }
 
 export type MediaItem =
-  | { kind: 'image'; src: string; alt: string }
-  | { kind: 'gif'; src: string; alt: string }
+  | { kind: 'image'; src: string; alt: string; thumbPosition?: string; thumbFit?: 'cover' | 'contain'; bodyHint?: string }
+  | { kind: 'gif'; src: string; alt: string; thumbPosition?: string; thumbFit?: 'cover' | 'contain'; bodyHint?: string }
   | { kind: 'youtube'; videoId: string; title: string }
   | { kind: 'demo'; url: string; label: string }
 
@@ -38,6 +38,7 @@ export interface Project {
   repoUrl?: string
   liveUrl?: string
   store?: { url: string; label: string }
+  videoUrl?: string
   snippetsDir?: string
   status: 'shipped' | 'wip' | 'archived'
 }

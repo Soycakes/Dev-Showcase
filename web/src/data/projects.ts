@@ -30,8 +30,9 @@ export const projects: Project[] = [
     categories: ['ai-agents'],
     stack: ['LangGraph', 'Python', 'Gemini API', 'LangSmith'],
     status: 'shipped',
-    media: [],
+    media: [{ kind: 'image', src: '/resume/media/SLG_Graph.png', alt: 'SoyLangGraph agent graph', thumbFit: 'contain' }],
     snippets: [],
+    repoUrl: 'https://github.com/Soycakes/SoyLangGraph',
   },
   {
     id: 'factory-game',
@@ -90,7 +91,7 @@ export const projects: Project[] = [
   {
     id: 'mmo-emulator',
     title: { en: 'MMORPG Emulator', ko: 'MMORPG 에뮬레이터' },
-    role: { en: 'Backend Engineer (Team of 4)', ko: '서버 엔지니어 (4인 팀)' },
+    role: { en: 'Server & Client Engineer', ko: '서버 & 클라이언트 엔지니어' },
     subtitle: { en: 'MMO Server & Client', ko: 'MMO 서버 & 클라이언트' },
     period: 'Mar 2024 - Present',
     categories: ['systems', 'fullstack'],
@@ -123,8 +124,9 @@ export const projects: Project[] = [
     categories: ['game-dev'],
     stack: ['Unreal Engine 5', 'C++', 'Perforce', 'Blueprints'],
     status: 'archived',
-    media: [],
+    media: [{ kind: 'image', src: '/resume/media/Dodgeball_1.png', alt: 'Dodgeball gameplay screenshot' }],
     snippets: [],
+    videoUrl: '/resume/media/DodgeballGameplay.mp4',
   },
   {
     id: 'android-drawing',

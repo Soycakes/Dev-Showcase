@@ -23,7 +23,7 @@ function MediaCarousel({ items, eager }: { items: MediaItem[]; eager: boolean })
 
   return (
     <div className="flex flex-col gap-2 h-full">
-      <div className="relative flex-1 min-h-48 rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+      <div className="relative flex-1 min-h-48 rounded-lg overflow-hidden bg-transparent">
         {eager ? <MediaSlide item={current} /> : (
           <div className="absolute inset-0 animate-pulse bg-neutral-200 dark:bg-neutral-700" />
         )}

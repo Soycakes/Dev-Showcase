@@ -4,4 +4,4 @@ Implemented a data conversion utility automating pipelines to translate Excel da
 
 Integrated ElasticSearch to capture and analyze live game market and player statistics, organizing telemetry into readable tables, graphs, and metrics to guide game economy balance.
 
-Engineered a dynamic quest system using a NavigableMap structure to process thousands of data sets instantly, utilizing batched database queries to speed up player state updates by 3x with safe data migrations for quest deployment.
+Engineered a dynamic quest system using a NavigableMap structure to process thousands of data sets instantly.

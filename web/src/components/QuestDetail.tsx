@@ -5,10 +5,13 @@ import folderClosedUrl from '../assets/icon_folderClosed.svg'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
+import rehypeRaw from 'rehype-raw'
+import { PhotoSlider } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
+import { useMdLightbox, IMG_SIZE, IMG_DEFAULT } from '../hooks/useMdLightbox'
 import hljs from 'highlight.js'
 import { WordRoller } from './WordRoller'
 import { TechBadge } from './TechIcon'
-import { MediaSlide, MediaThumb } from './MediaSlide'
 import { useLocale } from '../hooks/useLocale'
 import { STATUS_LABEL } from '../data/status'
 import { getSnippetsForDir } from '../data/codeFiles'
@@ -30,6 +33,14 @@ function getMarkdown(id: string, lang: string): string {
 const BTN_PRIMARY = 'font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity'
 const BTN_NAV = 'font-mono text-xs border border-neutral-300 dark:border-neutral-700 px-3 py-1.5 rounded-md text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors'
 
+function LbToolbar() {
+  return (
+    <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: 0, height: '100%', display: 'flex', alignItems: 'center', pointerEvents: 'none' }}>
+      <span style={{ fontSize: 12, color: '#fff', fontFamily: 'monospace' }}>Escape : Exit &nbsp;&nbsp; Scroll : Zoom</span>
+    </div>
+  )
+}
+
 interface Props {
   project: Project
   prevProject: Project | null
@@ -45,31 +56,29 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
   const { t, lang } = useLocale()
   const scrollRef = useRef<HTMLDivElement>(null)
   const snippetsRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    scrollRef.current?.scrollTo(0, 0)
-  }, [project.id])
+  useEffect(() => { scrollRef.current?.scrollTo(0, 0) }, [project.id])
 
-  function scrollToSnippets() {
-    if (!snippetsRef.current || !scrollRef.current) return
-    const containerRect = scrollRef.current.getBoundingClientRect()
-    const elemRect = snippetsRef.current.getBoundingClientRect()
-    scrollRef.current.scrollBy({ top: elemRect.top - containerRect.top - 80, behavior: 'smooth' })
+  function scrollIntoPanel(target: HTMLDivElement | null) {
+    if (!target || !scrollRef.current) return
+    const offset = target.getBoundingClientRect().top - scrollRef.current.getBoundingClientRect().top - 80
+    scrollRef.current.scrollBy({ top: offset, behavior: 'smooth' })
   }
 
   useEffect(() => {
     if (!scrollToCode) return
-    const timer = setTimeout(() => {
-      scrollToSnippets()
-      onScrollCodeDone?.()
-    }, 250)
+    const timer = setTimeout(() => { scrollIntoPanel(snippetsRef.current); onScrollCodeDone?.() }, 250)
     return () => clearTimeout(timer)
   }, [scrollToCode])
 
   const markdown = getMarkdown(project.id, lang)
+  const { slides: lbSlides, mediaItems, lbIndex, closeLightbox, setLbIndex, mdComponents } = useMdLightbox(markdown, project.media)
+
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
   const hasStore = !!project.store
+  const hasVideo = !!project.videoUrl
   const snippets = [
     ...project.snippets,
     ...(project.snippetsDir ? getSnippetsForDir(project.snippetsDir) : []),
@@ -101,7 +110,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-4">
           {hasLive && (
             <a href={project.liveUrl} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
               [ Live Demo ]
@@ -117,31 +126,62 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
               [ Github ]
             </a>
           )}
+          {hasVideo && (
+            <button onClick={() => scrollIntoPanel(videoRef.current)} className={BTN_PRIMARY}>
+              [ Watch Video ]
+            </button>
+          )}
           {hasSnippets && (
-            <button onClick={scrollToSnippets} className={BTN_PRIMARY}>
+            <button onClick={() => scrollIntoPanel(snippetsRef.current)} className={BTN_PRIMARY}>
               [ Code Examples ]
             </button>
           )}
         </div>
 
-        {project.media.length > 0 && (
-          <div className="mb-8 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
-            <DetailMediaCarousel items={project.media} />
-          </div>
-        )}
+        <div className="flex flex-wrap gap-1.5 mb-8">
+          {project.stack.map(s => <TechBadge key={s} name={s} />)}
+        </div>
 
-        <div className="prose prose-neutral dark:prose-invert prose-sm max-w-none mb-8">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+        <div key={lang} className="prose prose-neutral dark:prose-invert prose-sm max-w-none mb-8 animate-fade-in">
+          {mediaItems.map((item, i) => {
+            const sizeClass = (item.bodyHint && IMG_SIZE[item.bodyHint]) ?? IMG_DEFAULT
+            return (
+              <img
+                key={item.src}
+                src={item.src}
+                alt=""
+                loading="lazy"
+                onClick={() => setLbIndex(i)}
+                className={`${sizeClass} h-auto rounded-lg border border-neutral-200 dark:border-neutral-800 block mx-auto my-4 cursor-zoom-in`}
+              />
+            )
+          })}
+          <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeHighlight]} components={mdComponents}>
             {markdown}
           </ReactMarkdown>
         </div>
 
-        {hasSnippets && <div ref={snippetsRef}><SnippetTree snippets={snippets} /></div>}
+        {hasVideo && (
+          <div ref={videoRef} className="mb-8">
+            <video
+              src={project.videoUrl}
+              controls
+              className="w-full rounded-xl border border-neutral-200 dark:border-neutral-800"
+            />
+          </div>
+        )}
 
-        <div className="flex flex-wrap gap-1.5">
-          {project.stack.map(s => <TechBadge key={s} name={s} />)}
-        </div>
+        {hasSnippets && <div ref={snippetsRef}><SnippetTree snippets={snippets} /></div>}
       </div>
+
+      <PhotoSlider
+        images={lbSlides}
+        visible={lbIndex >= 0}
+        onClose={closeLightbox}
+        index={lbIndex}
+        onIndexChange={setLbIndex}
+        toolbarRender={LbToolbar}
+      />
     </div>
   )
 }
@@ -283,36 +323,4 @@ function SnippetTree({ snippets }: { snippets: AnySnippet[] }) {
   )
 }
 
-function DetailMediaCarousel({ items }: { items: MediaItem[] }) {
-  const [idx, setIdx] = useState(0)
-  const current = items[idx]
-
-  function prev() { setIdx(i => (i - 1 + items.length) % items.length) }
-  function next() { setIdx(i => (i + 1) % items.length) }
-
-  return (
-    <div>
-      <div className="relative aspect-video bg-neutral-100 dark:bg-neutral-800">
-        <MediaSlide item={current} />
-        {items.length > 1 && (
-          <>
-            <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 rounded bg-black/40 px-3 py-1.5 text-white hover:bg-black/60">&#8249;</button>
-            <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 rounded bg-black/40 px-3 py-1.5 text-white hover:bg-black/60">&#8250;</button>
-            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded bg-black/40 px-2 py-0.5 text-xs text-white">{idx + 1} / {items.length}</span>
-          </>
-        )}
-      </div>
-      {items.length > 1 && (
-        <div className="flex gap-2 p-3 overflow-x-auto bg-neutral-50 dark:bg-neutral-900">
-          {items.map((item, i) => (
-            <button key={i} onClick={() => setIdx(i)}
-              className={`h-14 w-20 shrink-0 rounded overflow-hidden border-2 transition-colors ${i === idx ? 'border-neutral-900 dark:border-white' : 'border-transparent'}`}>
-              <MediaThumb item={item} />
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}
 
