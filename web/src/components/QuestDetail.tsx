@@ -144,6 +144,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
 
         <div key={lang} className="prose prose-neutral dark:prose-invert prose-sm max-w-none mb-8 animate-fade-in">
           {mediaItems.map((item, i) => {
+            if (item.bodyHint === 'hidden') return null
             const sizeClass = (item.bodyHint && IMG_SIZE[item.bodyHint]) ?? IMG_DEFAULT
             return (
               <img

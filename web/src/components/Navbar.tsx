@@ -4,8 +4,12 @@ import { WordRoller } from './WordRoller'
 
 const NAV_LINKS = [
   { href: 'https://github.com/Soycakes/Dev-Showcase', en: 'Github', ko: 'Github', external: true },
-  { href: '#contact', en: 'Contact', ko: '이메일' },
+  { href: null, en: 'Contact', ko: '이메일' },
 ]
+
+function openContact() {
+  window.location.href = 'mailto:' + 'luke123park321' + '@' + 'gmail.com'
+}
 
 interface NavbarProps {
   showTooltip: boolean
@@ -29,10 +33,15 @@ export function Navbar({ showTooltip, onDismissTooltip, onLogoClick }: NavbarPro
         <div className="flex items-center gap-6">
           <ul className="hidden items-center gap-5 sm:flex">
             {NAV_LINKS.map(link => (
-              <li key={link.href}>
-                <a href={link.href} {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
-                  <WordRoller text={lang === 'en' ? link.en : link.ko} single />
-                </a>
+              <li key={link.en}>
+                {link.href === null
+                  ? <button onClick={openContact} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white cursor-pointer">
+                      <WordRoller text={lang === 'en' ? link.en : link.ko} single />
+                    </button>
+                  : <a href={link.href} {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
+                      <WordRoller text={lang === 'en' ? link.en : link.ko} single />
+                    </a>
+                }
               </li>
             ))}
           </ul>
