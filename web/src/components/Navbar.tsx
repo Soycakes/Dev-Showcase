@@ -1,15 +1,12 @@
 import { LangSwitcher } from './LangSwitcher'
 import { useLocale } from '../hooks/useLocale'
 import { WordRoller } from './WordRoller'
+import { useState } from 'react'
 
 const NAV_LINKS = [
   { href: 'https://github.com/Soycakes/Dev-Showcase', en: 'Github', ko: 'Github', external: true },
   { href: null, en: 'Contact', ko: '이메일' },
 ]
-
-function openContact() {
-  window.location.href = 'mailto:' + 'luke123park321' + '@' + 'gmail.com'
-}
 
 interface NavbarProps {
   showTooltip: boolean
@@ -19,6 +16,13 @@ interface NavbarProps {
 
 export function Navbar({ showTooltip, onDismissTooltip, onLogoClick }: NavbarProps) {
   const { lang } = useLocale()
+  const [copied, setCopied] = useState(false)
+
+  function handleContact() {
+    navigator.clipboard.writeText('luke123park321' + '@' + 'gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/80 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/80">
@@ -35,8 +39,8 @@ export function Navbar({ showTooltip, onDismissTooltip, onLogoClick }: NavbarPro
             {NAV_LINKS.map(link => (
               <li key={link.en}>
                 {link.href === null
-                  ? <button onClick={openContact} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white cursor-pointer">
-                      <WordRoller text={lang === 'en' ? link.en : link.ko} single />
+                  ? <button onClick={handleContact} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white cursor-pointer">
+                      {copied ? (lang === 'en' ? 'Copied!' : '복사됨!') : <WordRoller text={lang === 'en' ? link.en : link.ko} single />}
                     </button>
                   : <a href={link.href} {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})} className="text-sm text-neutral-500 transition hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white">
                       <WordRoller text={lang === 'en' ? link.en : link.ko} single />
