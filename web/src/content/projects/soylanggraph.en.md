@@ -1,10 +1,10 @@
-![|sm|inline](/resume/media/LS_1.png)
-![|sm|inline](/resume/media/LS_2.png)
-![|sm|inline](/resume/media/LS_3.png)
-![|sm|inline](/resume/media/LS_4.png)
-![|sm|inline](/resume/media/SLG_1.png)
-![|sm|inline](/resume/media/SLG_2.png)
-![|sm|inline](/resume/media/SLG_3.png)
+![|sm|inline](/Dev-Showcase/media/LS_1.png)
+![|sm|inline](/Dev-Showcase/media/LS_2.png)
+![|sm|inline](/Dev-Showcase/media/LS_3.png)
+![|sm|inline](/Dev-Showcase/media/LS_4.png)
+![|sm|inline](/Dev-Showcase/media/SLG_1.png)
+![|sm|inline](/Dev-Showcase/media/SLG_2.png)
+![|sm|inline](/Dev-Showcase/media/SLG_3.png)
 
 
 Designed 4 layer LangGraph state machine with Gemini Flash agents for context analysis, planning, critique, and coding layers, with MemorySaver checkpoints for human approval gates.
