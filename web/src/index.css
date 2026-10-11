@@ -24,3 +24,5 @@ body {
 /* react-photo-view: always show toolbar, don't hide on idle */
 .PhotoView-Slider__BannerWrap { opacity: 1 !important; }
 
+
+.prose details > summary { cursor: pointer; }

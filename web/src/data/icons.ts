@@ -7,6 +7,7 @@ import {
   siUnity, siUnrealengine, siSteam,
   siVercel, siGitlab, siGithub, siDocker, siPerforce, siYoutube,
   siJetpackcompose, siAndroid,
+  siGo, siCloudflare, siClaude, siLinux,
 } from 'simple-icons'
 import type { SimpleIcon } from 'simple-icons'
 import csharpUrl from '../assets/CSharp.svg'
@@ -21,6 +22,7 @@ export const CUSTOM_ICONS: Record<string, string> = {
 
 export const TECH_ICONS: Record<string, SimpleIcon> = {
   'Python': siPython,
+  'Go': siGo,
   'TypeScript': siTypescript,
   'JavaScript': siJavascript,
   'C++': siCplusplus,
@@ -44,6 +46,8 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'Supabase': siSupabase,
 
   'Unity': siUnity,
+  'WebGL': siUnity,
+  'Addressables': siUnity,
   'ScriptableObjects': siUnity,
   'ECS / DOTS': siUnity,
   'Netcode for Entities': siUnity,
@@ -60,6 +64,9 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'Docker': siDocker,
   'Perforce': siPerforce,
   'YouTube': siYoutube,
+  'Cloudflare': siCloudflare,
+  'Linux (VPS)': siLinux,
+  'Claude Code': siClaude,
 
   'Jetpack Compose': siJetpackcompose,
   'Room': siAndroid,

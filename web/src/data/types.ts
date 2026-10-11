@@ -40,5 +40,7 @@ export interface Project {
   store?: { url: string; label: string }
   videoUrl?: string
   snippetsDir?: string
-  status: 'shipped' | 'wip' | 'archived'
+  status: 'shipped' | 'beta' | 'wip' | 'archived'
+  featured?: boolean
+  stats?: { value: string; label: L10n }[]
 }

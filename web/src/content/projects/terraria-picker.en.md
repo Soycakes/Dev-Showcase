@@ -1,1 +1,17 @@
-Web app to pick and sort favorite weapons from Terraria game data on a dynamic grid, with a CSV data pipeline for importing and exporting new datasets.
+Terraria has over 400 weapons, and everyone who plays it has opinions about which ones are the best. This is a small browser tool for turning those opinions into a grid. The idea comes from the YouTuber Three, who ranks favorites this way, and I built a version that anyone can fill in themselves.
+
+You choose two weapon attributes, one for the rows and one for the columns. It could be weapon class against when it unlocks in progression, or rarity against how you get it. Each cell of the grid holds one weapon that fits both. Click a cell and you get a searchable list of only the weapons that qualify, and you pick one. The extra row and column at the edges let you nominate a favorite for each row and each column, and a corner cell holds your single favorite out of all those nominations. If you change the pick underneath a favorite, that favorite clears itself, so the grid never shows a favorite that is no longer in it.
+
+There is no backend. Filtering, state and saving all happen in the browser, and the site sits on GitHub Pages. A GitHub Actions workflow builds and publishes it on every push to main, so I never deploy by hand.
+
+Saving is the part I spent the most time on. Your picks are stored in localStorage as one slot per axis combination, keyed by the two fields (for example subclass and progression tier). Switching to a different pair of axes loads the slot for that pair, and switching back restores exactly what you left, with no page reload. Only item IDs are stored, which keeps the saved data small, and any ID that no longer matches a weapon is dropped quietly on load instead of breaking the grid.
+
+The grid itself has nothing hardcoded. Rows, columns and which weapons belong in which cell are all worked out from the weapon data at runtime. An axis is a single entry in a config file with optional extras: renamed labels, a custom sort order, and header colors. Rarity headers use the colors Terraria itself uses for item names. With 400+ weapons, I wrapped the axis values and the empty-cell detection in useMemo so that unrelated state changes, like opening a modal, don't recompute them.
+
+The weapon data started from Terradle's dataset, which has no notion of weapon subclass or progression tier, and those were the two axes I most wanted. So I wrote a small Node pipeline: an export script writes everything to a CSV (merging the upstream data with my own additions, with list fields joined by pipes), I fill in the missing columns by hand in a spreadsheet, and an import script reads it back. The importer handles quoted fields and list columns, turns TRUE and FALSE into real booleans, and can tell which weapons are not in the upstream dataset at all, so I can add ones it never had.
+
+Sprites load from a local folder by item ID. If a file is missing, the image falls back to the Terraria wiki, and if that fails too, it shows an animated placeholder. One bug came out of this: the fallback state was stuck on the image element, so after one weapon failed to load, the next weapon swapped into that cell started from the wrong fallback stage. Giving the image a key based on the item ID forces a fresh element every time the weapon changes, which fixed it.
+
+The look follows Terraria's own menus. It uses the game's Andy Std Bold pixel font, dark navy panels over a tiled biome background, sprites rendered unsmoothed so the pixels stay sharp, and the same gold border Terraria puts around hovered items. The controls bar is a blurred, semi-transparent panel.
+
+This is a fan project. The weapon sprites belong to Re-Logic, and the tool isn't affiliated with them.

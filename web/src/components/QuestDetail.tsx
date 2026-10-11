@@ -12,6 +12,7 @@ import { useMdLightbox, IMG_SIZE, IMG_DEFAULT } from '../hooks/useMdLightbox'
 import hljs from 'highlight.js'
 import { WordRoller } from './WordRoller'
 import { TechBadge } from './TechIcon'
+import { BTN, BTN_ROW } from './ProjectCard'
 import { useLocale } from '../hooks/useLocale'
 import { STATUS_LABEL } from '../data/status'
 import { getSnippetsForDir } from '../data/codeFiles'
@@ -30,8 +31,7 @@ function getMarkdown(id: string, lang: string): string {
 }
 
 
-const BTN_PRIMARY = 'font-mono text-xs bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-3 py-1.5 rounded-md hover:opacity-80 transition-opacity'
-const BTN_NAV = 'font-mono text-xs border border-neutral-300 dark:border-neutral-700 px-3 py-1.5 rounded-md text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors'
+const BTN_NAV = 'font-mono text-xs border border-neutral-300 dark:border-neutral-700 px-3 py-1.5 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors'
 
 function LbToolbar() {
   return (
@@ -91,7 +91,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
         <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-bold text-neutral-900 dark:text-white">
+              <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
                 <WordRoller text={t(project.title)} />
               </h1>
               <span className="text-xs text-neutral-400 dark:text-neutral-500 shrink-0">
@@ -110,30 +110,30 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className={`${BTN_ROW} mb-5`}>
           {hasLive && (
-            <a href={project.liveUrl} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
-              [ Live Demo ]
+            <a href={project.liveUrl} target="_blank" rel="noreferrer" className={BTN}>
+              Live demo ↗
             </a>
           )}
           {hasStore && (
-            <a href={project.store!.url} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
-              [ {project.store!.label} ]
+            <a href={project.store!.url} target="_blank" rel="noreferrer" className={BTN}>
+              {project.store!.label} ↗
             </a>
           )}
           {hasRepo && (
-            <a href={project.repoUrl} target="_blank" rel="noreferrer" className={BTN_PRIMARY}>
-              [ Github ]
+            <a href={project.repoUrl} target="_blank" rel="noreferrer" className={BTN}>
+              GitHub ↗
             </a>
           )}
           {hasVideo && (
-            <button onClick={() => scrollIntoPanel(videoRef.current)} className={BTN_PRIMARY}>
-              [ Watch Video ]
+            <button onClick={() => scrollIntoPanel(videoRef.current)} className={BTN}>
+              Watch video ↓
             </button>
           )}
           {hasSnippets && (
-            <button onClick={() => scrollIntoPanel(snippetsRef.current)} className={BTN_PRIMARY}>
-              [ Code Examples ]
+            <button onClick={() => scrollIntoPanel(snippetsRef.current)} className={BTN}>
+              Code examples ↓
             </button>
           )}
         </div>
@@ -153,7 +153,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
                 alt=""
                 loading="lazy"
                 onClick={() => setLbIndex(i)}
-                className={`${sizeClass} h-auto rounded-lg border border-neutral-200 dark:border-neutral-800 block mx-auto my-4 cursor-zoom-in`}
+                className={`${sizeClass} h-auto rounded-sm border border-neutral-200 dark:border-neutral-800 block mx-auto my-4 cursor-zoom-in`}
               />
             )
           })}
@@ -167,7 +167,7 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
             <video
               src={project.videoUrl}
               controls
-              className="w-full rounded-xl border border-neutral-200 dark:border-neutral-800"
+              className="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
             />
           </div>
         )}
@@ -302,7 +302,7 @@ function SnippetTree({ snippets }: { snippets: AnySnippet[] }) {
   }
 
   return (
-    <div className="mb-8 rounded-lg border border-neutral-200 dark:border-neutral-800 overflow-hidden">
+    <div className="mb-8 border border-neutral-200 dark:border-neutral-800 overflow-hidden">
       <div className="border-b border-neutral-200 dark:border-neutral-800 bg-neutral-950/20 py-1">
         <TreeNodes entries={tree} collapsed={collapsed} onToggle={toggleFolder} activePath={activePath} onSelect={setCurrent} depth={0} />
       </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { projects } from './data/projects'
 import { useFilter } from './hooks/useFilter'
 import { useLocale } from './hooks/useLocale'
 import { useOnboardingDemo } from './hooks/useOnboardingDemo'
@@ -21,14 +22,14 @@ function Hero() {
   const { lang } = useLocale()
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+    <section className="mx-auto max-w-5xl px-6 pt-20 pb-14">
+      <h1 className="text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
         <WordRoller text={HERO_TEXT.name[lang]} single />
       </h1>
-      <p className="mt-3 text-lg text-neutral-400 dark:text-neutral-300">
+      <p className="mt-3 text-lg text-neutral-500 dark:text-neutral-400">
         <WordRoller text={HERO_TEXT.tagline[lang]} />
       </p>
-      <div className="mt-5 flex gap-4">
+      <div className="mt-6 flex gap-5">
         <a href="https://github.com/Soycakes" target="_blank" rel="noreferrer"
           className="flex items-center gap-1.5 text-sm text-neutral-400 transition hover:text-neutral-900 dark:hover:text-white">
           <TechIcon name="GitHub" size={16} color="brand" />
@@ -91,6 +92,7 @@ export default function App() {
   useQuestNavigation({ filtered, activeId, setActiveId, exitQuest })
 
   const isQuest = mode === 'quest'
+  const featured = projects.find(p => p.featured)
 
   return (
     <div className={isQuest ? 'h-screen overflow-hidden flex flex-col' : 'min-h-screen'}>
@@ -112,10 +114,17 @@ export default function App() {
               transition={{ duration: 0.2 }}
             >
               <Hero />
+              {featured && (
+                <section className="mx-auto max-w-5xl px-6 pb-16" aria-label="Featured project">
+                  <div className="cursor-pointer" onClick={() => enterQuest(featured.id)}>
+                    <ProjectCard project={featured} onCodeClick={() => enterQuestAtCode(featured.id)} />
+                  </div>
+                </section>
+              )}
               <div id="projects" className="mx-auto max-w-5xl px-6 pb-24">
                 <FilterBar active={active} onChange={setActive} />
-                <section className="space-y-4" aria-label="Projects">
-                  {filtered.map(p => (
+                <section aria-label="Projects">
+                  {filtered.filter(p => !p.featured).map(p => (
                     <div key={p.id} className="cursor-pointer" onClick={() => enterQuest(p.id)}>
                       <ProjectCard project={p} onCodeClick={() => enterQuestAtCode(p.id)} />
                     </div>

@@ -15,10 +15,10 @@ function RailItem({ project, isActive, onClick }: RailItemProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left px-4 py-3 border-b border-neutral-100 dark:border-neutral-800 transition-colors border-l-4
+      className={`w-full text-left px-4 py-3 border-b border-neutral-100 dark:border-neutral-800 transition-colors
         ${isActive
-          ? 'border-l-amber-400 bg-neutral-100 dark:bg-neutral-800'
-          : 'border-l-transparent hover:bg-neutral-50 dark:hover:bg-neutral-900/50'
+          ? 'bg-neutral-100 dark:bg-neutral-800'
+          : 'opacity-60 hover:opacity-100 hover:bg-neutral-50 dark:hover:bg-neutral-900/50'
         }`}
     >
       <p className={`text-sm font-semibold truncate ${isActive ? 'text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'}`}>
