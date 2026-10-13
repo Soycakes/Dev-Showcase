@@ -16,6 +16,7 @@ export type MediaItem =
   | { kind: 'image'; src: string; alt: string; thumbPosition?: string; thumbFit?: 'cover' | 'contain'; bodyHint?: string }
   | { kind: 'gif'; src: string; alt: string; thumbPosition?: string; thumbFit?: 'cover' | 'contain'; bodyHint?: string }
   | { kind: 'youtube'; videoId: string; title: string }
+  | { kind: 'video'; src: string; poster: string; title: string }
   | { kind: 'demo'; url: string; label: string }
 
 export interface CodeSnippet {

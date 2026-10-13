@@ -24,10 +24,13 @@ const mdFiles = import.meta.glob('../content/projects/*.md', {
   eager: true,
 }) as Record<string, string>
 
-function getMarkdown(id: string, lang: string): string {
-  return mdFiles[`../content/projects/${id}.${lang}.md`]
-    ?? mdFiles[`../content/projects/${id}.en.md`]
-    ?? ''
+const isPlaceholder = (text?: string) => !text || /^\s*(WIP|<!--\s*stale)/i.test(text)
+
+function getMarkdown(id: string, lang: string): { text: string; fellBack: boolean } {
+  const own = mdFiles[`../content/projects/${id}.${lang}.md`]
+  if (own && !isPlaceholder(own)) return { text: own, fellBack: false }
+  const en = mdFiles[`../content/projects/${id}.en.md`] ?? ''
+  return { text: en, fellBack: lang !== 'en' && !!en }
 }
 
 
@@ -72,13 +75,14 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
     return () => clearTimeout(timer)
   }, [scrollToCode])
 
-  const markdown = getMarkdown(project.id, lang)
+  const { text: markdown, fellBack } = getMarkdown(project.id, lang)
   const { slides: lbSlides, mediaItems, lbIndex, closeLightbox, setLbIndex, mdComponents } = useMdLightbox(markdown, project.media)
 
   const hasRepo = !!project.repoUrl
   const hasLive = !!project.liveUrl
   const hasStore = !!project.store
   const hasVideo = !!project.videoUrl
+  const youtubeId = project.videoUrl?.match(/(?:youtu\.be\/|v=)([\w-]{11})/)?.[1]
   const snippets = [
     ...project.snippets,
     ...(project.snippetsDir ? getSnippetsForDir(project.snippetsDir) : []),
@@ -142,6 +146,12 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
           {project.stack.map(s => <TechBadge key={s} name={s} />)}
         </div>
 
+        {fellBack && (
+          <p className="mb-6 rounded-sm border border-neutral-400 bg-neutral-50 px-4 py-3 text-sm text-neutral-800 dark:border-neutral-500 dark:bg-neutral-900 dark:text-neutral-100">
+            아직 한국어 번역이 준비되지 않아 영문으로 표시됩니다. 양해 부탁드립니다.
+          </p>
+        )}
+
         <div key={lang} className="prose prose-neutral dark:prose-invert prose-sm max-w-none mb-8 animate-fade-in">
           {mediaItems.map((item, i) => {
             if (item.bodyHint === 'hidden') return null
@@ -164,11 +174,20 @@ export function QuestDetail({ project, prevProject, nextProject, onPrev, onNext,
 
         {hasVideo && (
           <div ref={videoRef} className="mb-8">
-            <video
-              src={project.videoUrl}
-              controls
-              className="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
-            />
+            {youtubeId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}`}
+                title={project.title.en}
+                allowFullScreen
+                className="aspect-video w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
+              />
+            ) : (
+              <video
+                src={project.videoUrl}
+                controls
+                className="w-full rounded-sm border border-neutral-200 dark:border-neutral-800"
+              />
+            )}
           </div>
         )}
 

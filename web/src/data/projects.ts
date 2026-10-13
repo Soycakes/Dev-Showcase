@@ -39,15 +39,17 @@ export const projects: Project[] = [
     status: 'beta',
     featured: true,
     stats: [
-      { value: '35K', label: { en: 'lines of Go + C#', ko: 'Go + C# 코드 라인' } },
       { value: '170+', label: { en: 'data driven cards', ko: '데이터 기반 카드' } },
       { value: '4.9x', label: { en: 'faster combat sim', ko: '전투 시뮬레이션 속도' } },
       { value: '3', label: { en: 'languages', ko: '지원 언어' } },
     ],
-    media: [{ kind: 'youtube', videoId: 'OAPuY1m37U0', title: 'Speaki the Chess beta trailer' }],
+    media: [
+      { kind: 'youtube', videoId: 'OAPuY1m37U0', title: 'Speaki the Chess beta trailer' },
+      { kind: 'youtube', videoId: 'BalPSlw5Zcg', title: 'Speaki the Chess beta 2 gameplay' },
+    ],
     snippets: [],
     liveUrl: 'https://speakithechess.soycake.dev/',
-    videoUrl: 'https://youtu.be/OAPuY1m37U0',
+    videoUrl: 'https://youtu.be/BalPSlw5Zcg',
   },
   {
     id: 'mapdev',
@@ -58,8 +60,9 @@ export const projects: Project[] = [
     categories: ['ai-agents', 'fullstack'],
     stack: ['LangGraph', 'Python', 'FastAPI', 'Next.js', 'TypeScript', 'Gemini API', 'SQLite', 'Tailwind CSS', 'pytest'],
     status: 'wip',
-    media: [],
+    media: [{ kind: 'video', src: '/Dev-Showcase/media/MAPDev_1.mp4', poster: '/Dev-Showcase/media/MAPDev_poster.webp', title: 'MAPDev example run' }],
     snippets: [],
+    videoUrl: '/Dev-Showcase/media/MAPDev_1.mp4',
   },
   {
     id: 'oc-maintainer',

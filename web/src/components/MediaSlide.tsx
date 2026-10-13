@@ -11,6 +11,9 @@ export function MediaSlide({ item }: { item: MediaItem }) {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
     )
   }
+  if (item.kind === 'video') {
+    return <video src={item.src} poster={item.poster} title={item.title} controls preload="metadata" className="absolute inset-0 h-full w-full bg-black object-contain" />
+  }
   if (item.kind === 'demo') {
     return (
       <a href={item.url} target="_blank" rel="noreferrer"
@@ -28,6 +31,9 @@ export function MediaThumb({ item }: { item: MediaItem }) {
   }
   if (item.kind === 'youtube') {
     return <img src={`https://img.youtube.com/vi/${item.videoId}/default.jpg`} alt="" className="h-full w-full object-cover" />
+  }
+  if (item.kind === 'video') {
+    return <img src={item.poster} alt="" className="h-full w-full object-cover" />
   }
   return <div className="h-full w-full bg-neutral-200 dark:bg-neutral-700" />
 }

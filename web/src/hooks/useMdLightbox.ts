@@ -4,6 +4,7 @@ import { MdVideo } from '../components/MdVideo'
 import type { MediaItem } from '../data/types'
 
 export const IMG_SIZE: Record<string, string> = {
+  tiny: 'max-w-[8rem]',
   xs: 'max-w-[25%]',
   sm: 'max-w-[40%]',
   lg: 'max-w-[80%]',

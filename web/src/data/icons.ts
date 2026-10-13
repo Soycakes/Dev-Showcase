@@ -4,7 +4,7 @@ import {
   siLangchain,
   siGooglegemini, siGooglesheets,
   siMysql, siSqlite, siElasticsearch, siSupabase,
-  siUnity, siUnrealengine, siSteam,
+  siUnity, siUnrealengine, siSteam, siBlender,
   siVercel, siGitlab, siGithub, siDocker, siPerforce, siYoutube,
   siJetpackcompose, siAndroid,
   siGo, siCloudflare, siClaude, siLinux,
@@ -56,6 +56,7 @@ export const TECH_ICONS: Record<string, SimpleIcon> = {
   'Unreal Engine': siUnrealengine,
   'Blueprints': siUnrealengine,
   'Steamworks': siSteam,
+  'Blender': siBlender,
 
   'Vercel': siVercel,
   'GitLab': siGitlab,
